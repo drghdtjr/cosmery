@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./orderSummary.module.css";
+import styles from "./OrderSummary.module.css";
 
 const OrderSummary = ({
   totalPrice,
