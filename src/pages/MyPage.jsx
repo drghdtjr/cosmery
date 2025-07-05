@@ -4,9 +4,9 @@ import SideMenu from '../components/myPage/sideMenu/SideMenu.jsx'
 import SideContent1 from '../components/myPage/sideContents/sidecontent/SideContent1.jsx'
 import { useState } from 'react'
 import SideContent2 from '../components/myPage/sideContents/sidecontent/SideContent2.jsx'
-import EditProfileForm from '../components/join/EditProfileForm.jsx.jsx'
-import ShippingAddressManager from '../components/shippingAddress/shippingAddrManager/ShippingAddressManager.jsx.jsx'
-import { orderHistory, cancelReturnExchangeData, couponData, myReviewData, myInquiryData } from '../components/myPage/myPageData'
+import EditProfileForm from '../components/join/EditProfileForm.jsx'
+import ShippingAddressManager from '../components/shippingAddress/shippingAddrManager/ShippingAddressManager.jsx'
+import { orderHistory, cancelReturnExchangeData, couponData, myReviewData, myInquiryData } from '../components/myPage/myPageData.js'
 
 const MyPage = () => {
   const [selectedMenu, setSelectedMenu] = useState("주문/배송 조회");

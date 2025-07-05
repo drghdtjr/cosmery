@@ -1,13 +1,13 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import styles from "../components/order/OrderDetail.module.css";
-import OrderProduct from "../components/order/orderProduct/OrderProduct";
-import ShippingAddressForm from "../components/shippingAddress/shippingAddrForm/ShippingAddressForm";
-import DeliveryRequestForm from "../components/order/deliveryRequestForm/DeliveryRequestForm";
-import CouponBox from "../components/order/couponBox/CouponBox";
-import PaymentMethod from "../components/order/paymentMethod/PaymentMethod";
+import OrderProduct from "../components/order/orderProduct/OrderProduct.jsx";
+import ShippingAddressForm from "../components/shippingAddress/shippingAddrForm/ShippingAddressForm.jsx";
+import DeliveryRequestForm from "../components/order/deliveryRequestForm/DeliveryRequestForm.jsx";
+import CouponBox from "../components/order/couponBox/CouponBox.jsx";
+import PaymentMethod from "../components/order/paymentMethod/PaymentMethod.jsx";
 import { useState } from "react";
-import OrderSummary from "../components/order/orderSummary/OrderSummary";
+import OrderSummary from "../components/order/orderSummary/OrderSummary.jsx";
 
 const OrderDetail = () => {
   const location = useLocation();

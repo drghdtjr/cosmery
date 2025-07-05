@@ -3,10 +3,10 @@ import styles from "./SideContent1.module.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import calendarIcon from "../../../../assets/calendar.svg";
-import TableBody1 from "../tableBody/TableBody1";
-import TableBody2 from "../tableBody/TableBody2";
-import TableBody4 from "../tableBody/TableBody4";
-import TableBody5 from "../tableBody/TableBody5";
+import TableBody1 from "../tableBody/TableBody1.jsx";
+import TableBody2 from "../tableBody/TableBody2.jsx";
+import TableBody4 from "../tableBody/TableBody4.jsx";
+import TableBody5 from "../tableBody/TableBody5.jsx";
 
 const SideContent1 = ({ title, head1, head2, head3, head4, data, type }) => {
   const [startDate, setStartDate] = useState(null);

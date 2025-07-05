@@ -6,7 +6,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Join from './pages/Join';
 import JoinForm from './pages/JoinForm';
-import Cart from './pages/cart';
+import Cart from './pages/Cart';
 import OrderDetail from './pages/OrderDetail';
 import MyPage from './pages/MyPage';
 import ProductDetail from './pages/ProductDetail';

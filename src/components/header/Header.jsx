@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
-import LNB from "../navigation/localNavi/LNB";
-import GNB from "../navigation/globalNavi/GNB";
-import SearchContainer from "./search/SearchContainer";
+import LNB from "../navigation/localNavi/LNB.jsx";
+import GNB from "../navigation/globalNavi/GNB.jsx";
+import SearchContainer from "./search/SearchContainer.jsx";
 
 const Header = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);

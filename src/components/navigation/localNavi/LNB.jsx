@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./lnb.module.css";
 import { useNavigate } from "react-router-dom";
-import categoryData from "../../data/categoryData";
+import categoryData from "../../data/categoryData.js";
 
 const LNB = ({ isCategoryOpen, setIsCategoryOpen }) => {
   const navigate = useNavigate();
