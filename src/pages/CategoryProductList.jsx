@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import CategoryBreadCrumb from '../components/categoryProductList/CategoryBreadCrumb'
+import CategoryBreadCrumb from '../components/categoryProductList/CategoryBreadCrumb.jsx'
 import { useParams } from 'react-router-dom';
+import CategoryFilterBar from '../components/categoryProductList/CategoryFilterBar.jsx';
 
 const CategoryProductList = () => {
   const { category, subcategory } = useParams();

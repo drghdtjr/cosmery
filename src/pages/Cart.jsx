@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../components/cart/CartPage.module.css";
-import CartSummary from "../components/cart/CartSummary/CartSummary";
-import ProductList from "../components/productList/ProductList/ProductList";
-import CartList from "../components/cart/cartList/CartList";
+import CartSummary from "../components/cart/CartSummary/CartSummary.jsx";
+import ProductList from "../components/productList/ProductList/ProductList.jsx";
+import CartList from "../components/cart/cartList/CartList.jsx";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 

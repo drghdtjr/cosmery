@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from '../components/myPage/MyPage.module.css'
-import SideMenu from '../components/myPage/sideMenu/SideMenu'
-import SideContent1 from '../components/myPage/sideContents/sidecontent/SideContent1'
+import SideMenu from '../components/myPage/sideMenu/SideMenu.jsx'
+import SideContent1 from '../components/myPage/sideContents/sidecontent/SideContent1.jsx'
 import { useState } from 'react'
-import SideContent2 from '../components/myPage/sideContents/sidecontent/SideContent2'
-import EditProfileForm from '../components/join/EditProfileForm'
-import ShippingAddressManager from '../components/shippingAddress/shippingAddrManager/ShippingAddressManager'
+import SideContent2 from '../components/myPage/sideContents/sidecontent/SideContent2.jsx'
+import EditProfileForm from '../components/join/EditProfileForm.jsx.jsx'
+import ShippingAddressManager from '../components/shippingAddress/shippingAddrManager/ShippingAddressManager.jsx.jsx'
 import { orderHistory, cancelReturnExchangeData, couponData, myReviewData, myInquiryData } from '../components/myPage/myPageData'
 
 const MyPage = () => {
