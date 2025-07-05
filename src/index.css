@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+:root{
+  --primary-color: #EA6770;
+  --secondary-color: #777777;
+  --text-color: #101010;
+  --text-color2: #4b4b4b;
+  --border-color1: #afafaf;
+  --border-color2: #cfcfcf;
+  --bg-color1: #ffffff;
+  --bg-color2: #d0dce533;
+  --bg-color3: #fafafa;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.5;
+  color: var(--text-color);
+  letter-spacing: -0.025rem;
+  background: var(--bg-color1);
+}
+ul, ol, li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+h2{
+  font-size: 28px;
+  font-weight: 500;
+}

@@ -1,0 +1,30 @@
+.signinWrap{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.signinInner{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 130px 0;
+    gap: 30px;
+}
+.phone{
+    background: var(--text-color);
+    color: var(--bg-color1);
+    width: 402px;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.kakao{
+    background: #FFEB00;
+    color: #3C1E1E;
+    width: 402px;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 16px;
+}

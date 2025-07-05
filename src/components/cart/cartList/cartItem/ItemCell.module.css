@@ -1,0 +1,37 @@
+.cartItemLeft {
+  width: 380px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cartItemCheckbox {
+  width: 17px;
+  height: 17px;
+  border: 1px solid var(--border-color1);
+  accent-color: var(--text-color);
+}
+.cartItemImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.cartItemInfo {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.infoTitle {
+  width: 100%;
+  font-size: 16px;
+}
+.infoSelect {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid var(--border-color2);
+  border-radius: 4px;
+  outline: none;
+}

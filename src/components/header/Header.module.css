@@ -1,0 +1,125 @@
+/* === 공통 === */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.headTop{
+  display: flex;
+  padding-top: 10px;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+/* === 헤더 전체 === */
+.header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--bg-color1);
+  border-bottom: 1px solid var(--border-color1);
+}
+
+/* === Head Mid (로고, 검색창, 아이콘 메뉴 포함) === */
+.headMid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+.headMid1{
+  width: 300px;
+  height: 100%;
+  display: flex;
+}
+
+/* === 햄버거 버튼 === */
+.lnbAllMenu {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* 햄버거 버튼 아이콘 */
+.hamburgerBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hamburgerBtn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+}
+
+/* === 로고 === */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.headMid2{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headMid3{
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* === 상단 아이콘 메뉴 === */
+.headNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headNav li {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headNav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.headNav img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.headNav span {
+  font-size: 12px;
+  margin-top: 4px;
+}

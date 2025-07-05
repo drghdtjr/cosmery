@@ -1,0 +1,16 @@
+.cartItemWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color2);
+}
+.cartItemRight {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 352px;
+  height: auto;
+}

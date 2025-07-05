@@ -1,0 +1,19 @@
+.couponRow{
+    width: 612px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.couponSelect{
+    width: 300px;
+    height: 100%;
+    border: 1px solid var(--border-color2);
+    font-size: 16px;
+    padding: 0 10px;
+}
+.discountAmount{
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+}

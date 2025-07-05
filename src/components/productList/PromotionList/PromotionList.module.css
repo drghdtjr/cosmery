@@ -1,0 +1,15 @@
+.promotionListWrap{
+    max-width: 1080px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.promotionList{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}

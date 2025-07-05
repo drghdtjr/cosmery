@@ -1,0 +1,42 @@
+.product3-container{
+    position: relative;
+}
+.product3-wrapper{
+    width: 590px;
+    height: 119px;
+    display: block;
+    outline: none;
+}
+.product3-detail-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.product3-photo{
+    width: 119px;
+    height: 119px;
+    position: relative;
+}
+.product3-photo img{
+    object-fit: cover;
+}
+.product3-detail{
+    width: 359px;
+    height: 118px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.product3-photo ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }

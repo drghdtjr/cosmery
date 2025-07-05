@@ -1,0 +1,59 @@
+.tableTitle {
+  width: 700px;
+  padding: 0 20px 20px 20px;
+  border-bottom: 1px solid var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 87px;
+  height: auto;
+}
+.tableCheckbox {
+  width: 17px;
+  height: 17px;
+  border: 1px solid var(--border-color1);
+  accent-color: var(--text-color);
+}
+.titleButton {
+  padding: 4px 8px;
+  font-size: 16px;
+  border: 1px solid var(--border-color1);
+  color: var(--secondary-color);
+  border-radius: 4px;
+}
+.cartTable {
+  width: 700px;
+  height: auto;
+}
+.cartHead {
+  width: 100%;
+  height: auto;
+}
+.tableRow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 30px;
+    border-bottom: 1px solid var(--border-color2);
+}
+.tableRow td:first-child{
+    width: 100px;
+    height: auto;
+}
+.itemMeta{
+    display: flex;
+}
+.itemMeta>*{
+    width: 90px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,64 @@
+.shippingAddressForm {
+  width: 474px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.formGroup label {
+  display: block;
+  font-size: 16px;
+  min-width: 60px;
+}
+.input {
+  width: 306px;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}
+.input2{
+    width: 306px;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.phoneGroup {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.inputShort {
+  width: 80px;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}
+
+.hyphen {
+  font-size: 16px;
+}
+.addressRow{
+    display: flex;
+    gap: 20px;
+}
+.searchButton{
+    display: flex;
+    height: 40px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--text-color);
+    color: var(--bg-color1);
+    font-size: 16px;
+}

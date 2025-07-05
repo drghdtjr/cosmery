@@ -1,0 +1,63 @@
+.product1-container {
+  position: relative;
+}
+.product1-wrapper {
+  width: 200px;
+  display: block;
+  outline: none;
+}
+.product1-detail-wrapper {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.photo {
+  width: 100%;
+  height: 225px;
+  position: relative;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product1-detail {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.product1-detail > span {
+  font-size: 12px;
+  color: #777;
+}
+.product1-detail > p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.product1-detail > div span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 2px;
+}
+
+.over ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.over {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.over.active {
+  opacity: 1;
+  pointer-events: auto;
+}

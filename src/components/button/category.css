@@ -1,0 +1,17 @@
+.category-btn{
+    display: flex;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--secondary-color);
+    background: var(--bg-color1);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+}
+.category-btn.active{
+    background: var(--text-color);
+    color: var(--bg-color1);
+}

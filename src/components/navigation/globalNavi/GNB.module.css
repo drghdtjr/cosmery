@@ -1,0 +1,18 @@
+.gnbMenu {
+  display: flex;
+}
+
+.gnbMenu li {
+  border-right: 1px solid #777;
+}
+
+.gnbMenu li:last-child {
+  border-right: none;
+}
+
+.gnbMenu a {
+  color: #777;
+  font-size: 12px;
+  padding: 0 8px;
+  display: block;
+}

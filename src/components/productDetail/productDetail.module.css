@@ -1,0 +1,290 @@
+.productDetailWrapper {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+  padding: 20px 24px 20px 0;
+  cursor: pointer;
+}
+
+.productSummaryWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 0;
+  width: 100%;
+  height: auto;
+}
+.productImageWrapper {
+  width: 530px;
+  height: 530px;
+}
+.productImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.productInfoWrapper {
+  width: 530px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 0;
+}
+.productInfoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productInfoHeader h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.productInfoHeaderButton {
+  display: flex;
+  gap: 5px;
+}
+.productInfoHeaderButton button {
+  width: 24px;
+  height: 24px;
+}
+.productInfoPrice {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.productInfoPriceDiscount {
+  display: flex;
+  align-items: flex-end;
+}
+.productInfoPriceOriginal {
+  display: flex;
+  align-items: flex-end;
+}
+.productInfoPriceOriginal del {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--border-color1);
+  padding-bottom: 5px;
+}
+.productInfoAdditionalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 36px;
+  gap: 12px;
+}
+.productInfoAdditionalInfoDelivery {
+  display: flex;
+  align-items: center;
+}
+.productInfoAdditionalInfoDeliveryText {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.productInfoAdditionalInfoDelivery {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.productInfoAdditionalInfoDelivery span {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.productInfoAdditionalInfoDelivery span:last-child {
+  color: var(--secondary-color);
+}
+.productInfoAdditionalInfoCustomer p {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.productInfoAdditionalInfoCustomer p span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.productInfoAdditionalInfoCustomer p span p {
+  color: var(--secondary-color);
+}
+.productQuantityWrapper {
+  background-color: var(--bg-color3);
+}
+.productQuantityWrapperInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px;
+}
+
+.productInfoAdditionalInfoQuantity p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.productInfoButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 24px;
+}
+.productInfoButtonWrapper button {
+  width: 150px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--bg-color1);
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.productInfoButtonWrapper button:last-child {
+  background-color: var(--text-color);
+  color: var(--bg-color1);
+  border: none;
+}
+.productTabsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.productTabsWrapper .tabList {
+  display: flex;
+}
+.productTabsWrapper .tabItem {
+  flex: 1;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid var(--text-color);
+  background-color: var(--bg-color3);
+  font-size: 16px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.productTabsWrapper .tabItem.active {
+  border-top: 1px solid var(--text-color);
+  border-left: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+  border-bottom: none;
+  background-color: var(--bg-color1);
+}
+.tabDescriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  padding: 300px 0;
+}
+.tabDescriptionWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tabReviewWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.tabReviewHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  gap: 40px;
+}
+.tabReviewHeader p {
+  font-size: 28px;
+  font-weight: 400;
+}
+.tabReviewHeader p em {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-style: normal;
+}
+.tabReviewHeaderImg {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.tabReviewHeaderImg img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+.tabDetailInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 0;
+}
+.tabDetailInfoTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tabDetailInfoRow {
+  height: 32px;
+  border-top: 1px solid var(--border-color1);
+}
+.tabDetailInfoRow:last-child {
+  border-bottom: 1px solid var(--border-color1);
+}
+.tabDetailInfoLabel {
+  width: 300px;
+  text-align: left;
+  padding-left: 20px;
+  background: #e7e7e7;
+  font-size: 14px;
+  font-weight: 400;
+}
+.tabDetailInfoValue {
+  width: 740px;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+}
+.tabInquiryWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+}
+.tabInquiryTitle {
+  font-size: 28px;
+  font-weight: 400;
+}
+.tabInquiryContent {
+  display: flex;
+  gap: 20px;
+
+}
+.tabInquiryContent img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}

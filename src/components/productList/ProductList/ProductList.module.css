@@ -1,0 +1,36 @@
+.recPrdtWrapper{
+    max-width: 1080px;
+    margin: 80px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.listTop{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+.listWrapper{
+    overflow: hidden;
+    width: calc(200px * 5 + 20px * 4);
+}
+.slideTrack{
+    display: flex;
+    gap: 20px;
+    transition: transform .3s ease;
+}
+.slideNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: auto;
+    height: auto;
+}
+.slideNav button{
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,173 @@
+.contentWrapper {
+  width: 800px;
+  height: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contentTitle {
+  width: 100%;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 28px;
+  font-weight: 400;
+}
+.contentFilter {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0 20px 40px;
+  background: #fafafa;
+}
+.filterTitle {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+  font-size: 14px;
+}
+.buttonFilter {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-color2);
+  margin-right: 20px;
+}
+.rangeButton {
+  width: auto;
+  height: auto;
+  padding: 6px 14px;
+  font-size: 12px;
+  color: var(--secondary-color);
+  border-right: 1px solid var(--border-color2);
+}
+.rangeButton:last-child {
+  border-right: none;
+}
+.rangeButton:hover {
+  background: var(--text-color);
+  color: var(--bg-color1);
+}
+.rangeButton.active {
+  background: var(--text-color);
+  color: var(--bg-color1);
+}
+.calendarFilter {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 20px;
+}
+.customDateInput {
+  position: relative;
+  width: 110px;
+  height: 26px;
+  border: 1px solid #ccc;
+  padding: 0 35px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-color1);
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hiddenDatePicker {
+  display: none;
+}
+.customDatePicker {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+.react-datepicker__input-container input {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+.calendarFilter > span {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+.queryButton {
+  width: 55px;
+  height: 26px;
+  padding: 6px 14px;
+  background: var(--text-color);
+  color: var(--bg-color1);
+  font-size: 12px;
+}
+.tableHead {
+  width: 100%;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content4Head1 {
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.content4Head2 {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.content4Head3 {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.content4Head4 {
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.tableBody {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-color2);
+}
+.bodyContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  height: auto;
+}
+.bodyContent > span {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
