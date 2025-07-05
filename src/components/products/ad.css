@@ -16,11 +16,13 @@
     gap: 30px;
 }
 .product3-photo{
-    width: 119px;
-    height: 119px;
+    width: 120px;
+    height: 120px;
     position: relative;
 }
 .product3-photo img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .product3-detail{
@@ -40,3 +42,7 @@
     justify-content: space-between;
     padding: 10px;
   }
+.product3-detail span {
+    font-family: Montserrat;
+    font-weight: 500;
+}

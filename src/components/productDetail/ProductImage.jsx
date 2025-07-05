@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './productDetail.module.css'
 
-const ProductImage = () => {
+const ProductImage = ({ data }) => {
   return (
     <div className={styles.productImageWrapper}>
-        <img src="../../../src/assets/placeholder-image.webp" alt="상품 이미지" />
+        <img src={data.image} alt="상품 이미지" />
     </div>
   )
 }

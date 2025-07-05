@@ -51,8 +51,11 @@
   font-size: 14px;
 }
 .product2-detail > div span {
+  font-family: Montserrat;
   font-size: 18px;
   font-weight: 500;
+  color: #000;
   margin-right: 2px;
 }
+
 

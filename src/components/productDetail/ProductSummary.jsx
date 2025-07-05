@@ -4,11 +4,11 @@ import ProductImage from './ProductImage'
 import ProductInfo from './ProductInfo'
 
 // 왼쪽 이미지 + 오른쪽 상품 정보
-const ProductSummary = ({ product }) => {
+const ProductSummary = ({ data }) => {
   return (
     <div className={style.productSummaryWrapper}>
-        <ProductImage/>
-        <ProductInfo/>
+        <ProductImage data={data}/>
+        <ProductInfo data={data}/>
     </div>
   )
 }

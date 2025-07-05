@@ -2,7 +2,7 @@ import React from "react";
 import './ad.css'
 import { useState } from "react";
 
-const Ad = ({ clickCart, clickWish }) => {
+const Ad = ({ clickCart, clickWish, data }) => {
   const [mouseover, setMouseover] = useState(false);
   return (
     <div className="product3-container">
@@ -13,7 +13,7 @@ const Ad = ({ clickCart, clickWish }) => {
             onMouseEnter={() => setMouseover(true)}
             onMouseLeave={() => setMouseover(false)}
           >
-            <img src="../../src/assets/product1.png" alt="product1" />
+            <img src={data.image} alt="product1" />
             <div className={`over ${mouseover ? "active" : ""}`}>
               <ul>
                 <li>
@@ -30,9 +30,9 @@ const Ad = ({ clickCart, clickWish }) => {
             </div>
           </div>
           <div className="product3-detail">
-            <p>시카 트러블 진정 크림</p>
+            <p>{data.name}</p>
             <div>
-              <span>24,900</span>원
+              <span>{data.discountedPrice}</span>원
             </div>
           </div>
         </div>

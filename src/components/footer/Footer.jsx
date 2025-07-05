@@ -8,22 +8,10 @@ const Footer = () => {
         <div className={styles.footInner}>
           <ul className={styles.footNav1}>
             <li>
-              <a href="#">회사소개</a>
-            </li>
-            <li>
-              <a href="#">문의하기</a>
-            </li>
-            <li>
-              <a href="#">배송 및 반품 안내</a>
-            </li>
-            <li>
               <a href="#">이용약관</a>
             </li>
             <li>
               <a href="#">개인정보처리방침</a>
-            </li>
-            <li>
-              <a href="#">제휴/입점 문의</a>
             </li>
           </ul>
           <ul className={styles.footNav2}>
@@ -48,7 +36,7 @@ const Footer = () => {
             대표: 유지원 | 사업자등록번호: 123-45-67890
           </p>
           <p className={styles.footText}>
-            주소: 서울특별시 강남구 테헤란로 123, 4층
+            주소: 경기도 수원시 영통구 영통동
           </p>
           <p className={styles.footText}>
             통신판매업신고번호: 제2025-서울강남-01234호
@@ -64,9 +52,6 @@ const Footer = () => {
             운영시간: 평일 10:00 - 17:00 (점심시간 12:00 - 13:00)
           </p>
           <p className={styles.footText}>주말/공휴일 휴무</p>
-          <p className={styles.footText}>
-            자주 묻는 질문: <a href="#">FAQ 바로가기</a>
-          </p>
         </div>
       </div>
     </div>

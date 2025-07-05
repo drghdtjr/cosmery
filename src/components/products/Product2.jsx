@@ -2,7 +2,7 @@ import React from 'react'
 import './product2.css'
 import { useState } from 'react';
 
-const Product2 = ({ clickCart, clickWish }) => {
+const Product2 = ({ clickCart, clickWish, data }) => {
   const [mouseover, setMouseover] = useState(false);
   return (
     <div className="product2-container">
@@ -13,13 +13,13 @@ const Product2 = ({ clickCart, clickWish }) => {
             onMouseEnter={() => setMouseover(true)}
             onMouseLeave={() => setMouseover(false)}
           >
-            <img src="../../src/assets/product1.png" alt="product2" />
+            <img src={data.image} alt="product2" />
           
           </div>
           <div className="product2-detail">
-            <p>시카 트러블 진정 크림</p>
+            <p>{data.name}</p>
             <div>
-              <span>24,900</span>원
+              <span>{data.discountedPrice}</span>원
             </div>
           </div>
         </div>

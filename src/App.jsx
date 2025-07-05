@@ -10,6 +10,7 @@ import Cart from './pages/Cart';
 import OrderDetail from './pages/OrderDetail';
 import MyPage from './pages/MyPage';
 import ProductDetail from './pages/ProductDetail';
+import CategoryProductList from './pages/CategoryProductList';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/order/order-detail' element={<OrderDetail />} />
         <Route path='/my-page' element={<MyPage />} />
         <Route path='/product-detail' element={<ProductDetail />} />
+        <Route path='/category-product-list' element={<CategoryProductList />} />
       </Routes>
       <Footer />
     </>

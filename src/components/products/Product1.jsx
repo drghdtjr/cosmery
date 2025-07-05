@@ -1,25 +1,31 @@
 import React from "react";
 import "./product1.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Product1 = ({ clickCart, clickWish }) => {
+const Product1 = ({ clickCart, clickWish, data }) => {
   const [mouseover, setMouseover] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/product-detail`, { state: { data } });
+  };
 
   return (
     <div className="product1-container">
-      <a href="/product-detail" className="product1-wrapper">
+      <a href={`/product-detail`} className="product1-wrapper" onClick={handleClick}>
         <div className="product1-detail-wrapper">
           <div
             className="photo"
             onMouseEnter={() => setMouseover(true)}
             onMouseLeave={() => setMouseover(false)}
           >
-            <img src="../../src/assets/product1.png" alt="product1" />
+            <img src={data.image} alt="product1" />
           </div>
           <div className="product1-detail">
-            <p>시카 트러블 진정 크림</p>
+            <p>{data.name}</p>
             <div>
-              <span>24,900</span>원
+              <span>{data.discountedPrice}</span>원
             </div>
           </div>
         </div>

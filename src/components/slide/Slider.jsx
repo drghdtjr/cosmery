@@ -3,9 +3,9 @@ import "./slide.css";
 import { useState } from "react";
 import { useEffect } from "react";
 const images = [
-  { src: "../../src/assets/slide1.jpg", alt: "슬라이드 1" },
-  { src: "../../src/assets/slide2.jpg", alt: "슬라이드 2" },
-  { src: "../../src/assets/slide3.jpg", alt: "슬라이드 3" },
+  { src: "../../src/assets/banner/banner1.jpg", alt: "슬라이드 1" },
+  { src: "../../src/assets/banner/banner2.jpg", alt: "슬라이드 2" },
+  { src: "../../src/assets/banner/banner3.jpg", alt: "슬라이드 3" },
 ];
 const Slider = () => {
   const [currentIdx, setCurrentIdx] = useState(0);

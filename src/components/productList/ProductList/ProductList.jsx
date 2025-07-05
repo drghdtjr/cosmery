@@ -3,6 +3,7 @@ import Product1 from "../../products/Product1";
 import { useState } from "react";
 import AddToCartButton from "../../cart/addToCartButton/AddToCartButton";
 import WishButton from "../../wish/WishButton";
+import { productData } from "../../products/productData";
 
 const ProductList = ({ title }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -14,7 +15,7 @@ const ProductList = ({ title }) => {
   };
 
   const clickRight = () => {
-    setCurrentIdx((prev) => Math.min(prev + 1, 7));
+    setCurrentIdx((prev) => Math.min(prev + 1, (productData.length / 2) - 1));
   };
 
   const openCart = () => setShowCart(true);
@@ -43,10 +44,9 @@ const ProductList = ({ title }) => {
           className={styles.slideTrack}
           style={{ transform: `translateX(-${currentIdx * 220}px)` }}
         >
-          {Array(12)
-            .fill(0)
-            .map((_, i) => (
-              <Product1 key={i} clickCart={openCart} clickWish={openWish} />
+          {productData
+            .map((data, index) => (
+              <Product1 key={index} clickCart={openCart} clickWish={openWish} data={data} />
             ))}
         </div>
       </div>

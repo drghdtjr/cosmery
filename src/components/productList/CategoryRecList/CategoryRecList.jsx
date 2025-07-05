@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import AddToCartButton from "../../cart/addToCartButton/AddToCartButton";
 import WishButton from "../../wish/WishButton";
+import { productData } from "../../products/productData";
 const productText = [
   { number: 1, text: "[대용량 500ml]클리어 피니쉬 선젤 SPF50++(1+1 기획전)" },
   { number: 2, text: "[대용량 500ml]클리어 피니쉬 선젤 SPF50++(1+1 기획전)" },
@@ -125,10 +126,9 @@ const CategoryRecList = () => {
                   className={styles.productsContainer}
                   style={{ transform: `translateX(-${currentIdx * 570}px)` }}
                 >
-                  {Array(5)
-                    .fill(0)
-                    .map((_, i) => (
-                      <Product2 key={i} clickCart={openCart} clickWish={openWish} />
+                  {productData
+                    .map((data, index) => (
+                      <Product2 key={index} clickCart={openCart} clickWish={openWish} data={data} />
                     ))}
                 </div>
               </div>

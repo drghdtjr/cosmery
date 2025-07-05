@@ -1,0 +1,102 @@
+.promotionWrap{
+    width: 500px;
+    height: 400px;
+    position: relative;
+}
+.promotionImage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.promotionWrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.promotionImageOverlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+.promotionDetail{
+    position: absolute;
+    left: 0;
+    bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 20px;
+}
+.detailTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.detailTitle span{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--bg-color1);
+}
+.promotionDetail button{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, .2);
+    color: var(--bg-color1);
+}
+.promotionDetail button:hover{
+    background-color: rgba(0, 0, 0, .2);
+    transition: all .2s ease-in-out;
+}
+.promotionModal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+.promotionModalContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--bg-color1);
+    border-radius: 4px;
+    max-width: 1000px;
+    height: 500px;
+    overflow-y: auto;
+    z-index: 1001;
+}
+.promotionModalContentHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.promotionModalClose{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promotionModalContentInner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./productDetail.module.css";
 import ItemCounter from "../cart/cartList/cartItem/ItemCounter";
 
-const ProductInfo = () => {
+// 천 단위 콤마 포맷팅 함수
+const formatNumber = (num) => {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+const ProductInfo = ({ data }) => {
   const [quantity, setQuantity] = useState(1);
+  const [price, setPrice] = useState(0);
+
+  useEffect(() => {
+    const value = data.discountedPrice.replace(/,/g, "");
+    setPrice(parseInt(value) * quantity);
+  }, [data, quantity]);
 
   return (
     <div className={styles.productInfoWrapper}>
       {/* 상품명 + 좋아요, 공유 버튼 */}
       <div className={styles.productInfoHeader}>
-        <h2>상품명</h2>
+        <h2>{data.name}</h2>
         <div className={styles.productInfoHeaderButton}>
           <button>
             <img src="../../../src/assets/heart.svg" alt="좋아요" />
@@ -31,22 +42,20 @@ const ProductInfo = () => {
               marginRight: "20px",
             }}
           >
-            30%
+            {data.discountPercent}%
           </span>{" "}
           <strong
-            className="font-montserrat"
-            style={{ fontSize: "36px", fontWeight: "600" }}
+            style={{ fontSize: "36px", fontWeight: "500", fontFamily: "Montserrat" }}
           >
-            14,000
+            {data.discountedPrice}
           </strong>
           <span style={{ fontSize: "28px", fontWeight: "500" }}>원</span>
         </p>
         <p className={styles.productInfoPriceOriginal}>
           <del
-            className="font-montserrat"
-            style={{ fontSize: "24px", fontWeight: "500" }}
+            style={{ fontSize: "24px", fontWeight: "500", fontFamily: "Montserrat" }}
           >
-            20,000
+            {data.originalPrice}
           </del>
         </p>
       </div>
@@ -69,14 +78,12 @@ const ProductInfo = () => {
                 alt="고객 만족도"
               />
               <p
-                className="font-montserrat"
-                style={{ fontSize: "16px", fontWeight: "500" }}
+                style={{ fontSize: "16px", fontWeight: "500", fontFamily: "Montserrat" }}
               >
                 4.9
               </p>
               <p
-                className="font-montserrat"
-                style={{ fontSize: "16px", fontWeight: "500" }}
+                style={{ fontSize: "16px", fontWeight: "500", fontFamily: "Montserrat" }}
               >
                 (1,000)
               </p>
@@ -90,10 +97,9 @@ const ProductInfo = () => {
           <ItemCounter quantity={quantity} onChangeQuantity={setQuantity} />
           <p>
             <strong
-              className="font-montserrat"
-              style={{ fontSize: "28px", fontWeight: "600" }}
+              style={{ fontSize: "28px", fontWeight: "500", fontFamily: "Montserrat" }}
             >
-              14,000
+              {formatNumber(price)}
             </strong>
             <span style={{ fontSize: "24px", fontWeight: "500" }}>원</span>
           </p>
