@@ -9,7 +9,7 @@ const LNB = ({ isCategoryOpen, setIsCategoryOpen }) => {
 
   const handleCategoryClick = (category, subcategory) => {
     setSelectedCategory(category);
-    navigate(`/category-product-list?category=${category}&subcategory=${subcategory}`);
+    navigate(`/category-product-list/${category}/${subcategory}`);
   };
 
   return (

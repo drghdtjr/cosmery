@@ -27,7 +27,7 @@ function App() {
         <Route path='/order/order-detail' element={<OrderDetail />} />
         <Route path='/my-page' element={<MyPage />} />
         <Route path='/product-detail' element={<ProductDetail />} />
-        <Route path='/category-product-list' element={<CategoryProductList />} />
+        <Route path='/category-product-list/:category/:subcategory' element={<CategoryProductList />} />
       </Routes>
       <Footer />
     </>
