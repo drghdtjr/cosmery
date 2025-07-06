@@ -12,8 +12,8 @@ const TabReview = () => {
           리뷰를 작성하면 <em>포인트</em>를 드려요!
         </p>
         <div className={styles.tabReviewHeaderImg}>
-            <img src="../../../src/assets/nomalReview.png" alt="리뷰1" />
-            <img src="../../../src/assets/cameraReview.png" alt="리뷰1" />
+            <img src="/nomalReview.png" alt="리뷰1" />
+            <img src="/cameraReview.png" alt="리뷰1" />
         </div>
       </div>
       <RatingSummary />

@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./CategoryRecList.module.css";
-import Product2 from "../../products/Product2";
-import Product2Text from "../../products/Product2Text";
-import Category from "../../button/Category";
-import { useState } from "react";
-import { useEffect } from "react";
-import AddToCartButton from "../../cart/addToCartButton/AddToCartButton";
-import WishButton from "../../wish/WishButton";
-import { productData } from "../../products/productData";
+import Product2 from "../products/Product2";
+import Product2Text from "../products/Product2Text";
+import Category from "../button/Category";
+import { useState, useEffect } from "react";
+import AddToCartButton from "../cart/AddToCartButton";
+import WishButton from "../cart/WishButton";
+import { productData } from "../data/productData";
 const productText = [
   { number: 1, text: "[대용량 500ml]클리어 피니쉬 선젤 SPF50++(1+1 기획전)" },
   { number: 2, text: "[대용량 500ml]클리어 피니쉬 선젤 SPF50++(1+1 기획전)" },

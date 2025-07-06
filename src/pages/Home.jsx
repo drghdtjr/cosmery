@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "../components/slide/Slider.jsx";
-import ProductList from "../components/productList/ProductList/ProductList.jsx";
-import PromotionList from "../components/productList/PromotionList/PromotionList.jsx";
-import CategoryRecList from "../components/productList/CategoryRecList/CategoryRecList.jsx";
-import InfluencerAd from "../components/productList/InfluencerAd/InfluencerAd.jsx";
+import ProductList from "../components/productList/ProductList.jsx";
+import PromotionList from "../components/productList/PromotionList.jsx";
+import CategoryRecList from "../components/productList/CategoryRecList.jsx";
+import InfluencerAd from "../components/productList/InfluencerAd.jsx";
 
 const Home = () => {
   return (

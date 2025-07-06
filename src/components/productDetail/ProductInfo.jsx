@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./productDetail.module.css";
-import ItemCounter from "../cart/cartList/cartItem/ItemCounter";
+import ItemCounter from "../cart/cartItem/ItemCounter";
 
 // 천 단위 콤마 포맷팅 함수
 const formatNumber = (num) => {
@@ -23,10 +23,10 @@ const ProductInfo = ({ data }) => {
         <h2>{data.name}</h2>
         <div className={styles.productInfoHeaderButton}>
           <button>
-            <img src="../../../src/assets/heart.svg" alt="좋아요" />
+            <img src="./heart.svg" alt="좋아요" />
           </button>
           <button>
-            <img src="../../../src/assets/share.svg" alt="공유" />
+            <img src="./share.svg" alt="공유" />
           </button>
         </div>
       </div>
@@ -74,7 +74,7 @@ const ProductInfo = ({ data }) => {
             <span>
               <img
                 style={{ width: "20px", height: "20px" }}
-                src="../../../src/assets/star.svg"
+                src="./star.svg"
                 alt="고객 만족도"
               />
               <p
@@ -107,8 +107,8 @@ const ProductInfo = ({ data }) => {
       </div>
       {/* 구매 버튼 */}
       <div className={styles.productInfoButtonWrapper}>
-        <button><img src="../../../src/assets/my-bag.svg" alt="장바구니" />장바구니</button>
-        <button><img src="../../../src/assets/gift.svg" alt="선물하기" />선물하기</button>
+        <button><img src="./my-bag.svg" alt="장바구니" />장바구니</button>
+        <button><img src="./gift.svg" alt="선물하기" />선물하기</button>
         <button>구매하기</button>
       </div>
     </div>

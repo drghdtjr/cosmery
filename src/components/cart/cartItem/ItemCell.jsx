@@ -21,7 +21,7 @@ const ItemCell = ({
       {/* 이미지 */}
       <img
         className={styles.cartItemImg}
-        src="../../src/assets/placeholder-image.webp"
+        src="/placeholder-image.webp"
         alt="예시 이미지"
       />
       {/* 상품 정보 */}

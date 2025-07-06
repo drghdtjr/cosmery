@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./ShippingAddressManager.module.css";
-import Modal from "../modal/Modal"; // Modal 컴포넌트는 따로 구성돼 있어야 합니다
-import ManagerForm from "../shippingAddrForm/ManagerForm";
+import Modal from "./Modal"; // Modal 컴포넌트는 따로 구성돼 있어야 합니다
+import ManagerForm from "./ManagerForm";
 
 const dummyAddresses = [
   {

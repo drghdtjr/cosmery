@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./promotion.module.css";
 import Product1 from "./Product1";
-import { productData } from "./productData";
+import { productData } from "../data/productData.js";
 
 const Promotion = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);

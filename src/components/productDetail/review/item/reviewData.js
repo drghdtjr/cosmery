@@ -13,7 +13,7 @@ const reviewData = [
 앞으로 재구매 100% 할 예정입니다.
 수분 크림 찾는 분들한테 진짜 강력 추천해요!`,
     date: "2025.07.02",
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
 
@@ -29,7 +29,7 @@ const reviewData = [
 며칠 써보니까 각질도 많이 줄었고 피부결이 부드러워졌어요.
 향도 거의 없어서 부담 없고, 제형도 부드러워서 예민한 피부에도 순하게 잘 맞았어요.
 앞으로 재구매 100% 할 예정입니다. 수분 크림 찾는 분들한테 진짜 강력 추천해요!`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -42,7 +42,7 @@ const reviewData = [
 다만 에어컨 있는 사무실에서는 오후쯤 약간 당김이 느껴졌어요.
 저녁에 바를 땐 다른 보습제랑 같이 쓰는 게 좋을 것 같아요.
 그래도 트러블 없고 자극 없는 점은 만족합니다. 재구매 의사는 반반이에요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -56,7 +56,7 @@ const reviewData = [
 제형은 촉촉한데 유분기가 많지 않아서 지성 피부에게도 잘 맞을 것 같아요.
 피부가 예민한 날에도 자극이 없어서 안심하고 쓸 수 있었어요.
 디자인도 깔끔하고 튜브 타입이라 위생적으로 쓸 수 있는 점도 좋습니다.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -70,7 +70,7 @@ const reviewData = [
 보습력도 나쁘진 않지만 하루 종일 유지되는 건 아닌 듯합니다.
 그래도 향이 없고 자극이 없어서 예민한 피부에 적당한 크림 같아요.
 다시 구매할지는 다른 제품 써본 후에 결정할 것 같아요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -84,7 +84,7 @@ const reviewData = [
 기초 단계를 간단히 해도 이 크림 하나만으로 충분히 보습이 되는 것 같아요.
 향도 거의 없고, 제형이 부드러워서 흡수도 빠르고 마무리감도 좋아요.
 벌써 두 통째 쓰고 있고, 앞으로도 계속 구매할 예정이에요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -96,7 +96,7 @@ const reviewData = [
     content: `아침 출근 전에 바르기 딱 좋은 크림이에요. 무겁지 않고 빠르게 흡수돼서 메이크업 전에 부담 없어요.
 피부에 남는 끈적임이 없어서 여름철에도 쓸 수 있을 것 같아요.
 단독으로 쓰기엔 건조할 수 있어서 저녁엔 오일이랑 같이 써요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -109,7 +109,7 @@ const reviewData = [
 며칠 써보니까 오히려 붉은기가 줄고 피부결도 훨씬 좋아졌어요.
 수분감도 충분해서 속당김 없이 하루 종일 편안해요.
 앞으로도 정착해서 쓰려고요. 추천합니다.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -121,7 +121,7 @@ const reviewData = [
     content: `인공적인 향에 민감해서 제품 고를 때 항상 고민인데, 이건 거의 무향이라 부담이 없어요.
 피부에 바를 때도 부드럽고 자극 없이 흡수돼요.
 한여름에도 무겁지 않게 쓸 수 있을 정도로 산뜻한 마무리감이에요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -132,7 +132,7 @@ const reviewData = [
     title: "보통이에요",
     content: `가격 대비 성능은 무난한 편이에요. 특출나게 좋진 않지만 큰 단점도 없어요.
 예민한 날에도 트러블이 없었고, 무난하게 쓸 수 있는 제품이라고 생각해요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -145,7 +145,7 @@ const reviewData = [
 끈적임 없이 촉촉하고, 흡수도 잘 된다고 하시네요.
 피부가 민감하신 편인데 순하게 잘 맞아서 다행이에요.
 다음엔 세트로 같이 사드릴 생각입니다.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -157,7 +157,7 @@ const reviewData = [
     content: `수분 부족형 지성이라 겉은 번들거리고 속은 당기는 피부였는데, 이 크림 쓰고 나서 밸런스가 맞아가는 느낌이에요.
 하루 종일 유분도 덜 올라오고, 촉촉함도 오래 유지돼요.
 특히 밤에 바르고 자면 아침에 얼굴이 매끈해서 기분이 좋아요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -169,7 +169,7 @@ const reviewData = [
     content: `지성인데 속건조가 있어서 수분 크림 고르기 어려웠는데 이 제품은 딱 좋아요.
 무겁지 않으면서도 촉촉하고, 메이크업 전에 써도 밀리지 않아요.
 향도 자극적이지 않아서 꾸준히 쓰게 되는 제품이에요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -181,7 +181,7 @@ const reviewData = [
     content: `이 제품을 친구 추천으로 샀는데 너무 만족해요.
 처음엔 무난했는데, 꾸준히 쓰다 보니 피부결이 부드러워지고 속당김이 정말 많이 줄었어요.
 진짜 이런 제품이 더 유명해졌으면 좋겠어요. 완전 재구매 예정입니다.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -192,7 +192,7 @@ const reviewData = [
     title: "크림 하나로 충분해요",
     content: `기초 단계 줄이고 싶어서 간단한 라인을 찾고 있었는데, 이 제품 하나만으로도 보습이 충분해요.
 아침엔 가볍게, 저녁엔 조금 넉넉히 발라주면 피부가 하루 종일 편안해요.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
   {
@@ -204,7 +204,7 @@ const reviewData = [
     content: `수분크림 유목민이었는데 이걸로 정착했어요.
 여름에도 답답하지 않고 겨울에도 충분히 보습돼서 사계절템으로 딱이에요.
 남자친구도 같이 쓰고 있는데 트러블 없이 잘 맞아서 만족합니다.`,
-    image: "../../../src/assets/placeholder-image.webp",
+    image: "/placeholder-image.webp",
     reportable: true,
   },
 ];

@@ -1,7 +1,7 @@
 import React from 'react'
 import BreadCrumb from '../components/productDetail/BreadCrumb.jsx'
 import ProductSummary from '../components/productDetail/ProductSummary.jsx'
-import ProductCarosel from '../components/productDetail/ProductCarosel.jsx'
+import ProductList from '../components/productList/ProductList.jsx'
 import ProductTabs from '../components/productDetail/ProductTabs.jsx'
 import styles from '../components/productDetail/productDetail.module.css'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -22,7 +22,7 @@ const ProductDetail = () => {
     <div className={styles.productDetailWrapper}>
       <BreadCrumb />
       <ProductSummary data={data} />
-      <ProductCarosel />
+      <ProductList title="함께보면 좋은 상품" />
       <ProductTabs />
     </div>
   )

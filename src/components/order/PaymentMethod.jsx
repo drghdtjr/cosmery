@@ -18,8 +18,8 @@ const PaymentMethod = () => {
         <img
           src={
             mainMethod === "card"
-              ? "../../../src/assets/radio_active.svg"
-              : "../../../src/assets/radio.svg"
+              ? "/radio_active.svg"
+              : "/radio.svg"
           }
           alt="카드 선택"
           className={styles.radioIcon}
@@ -37,8 +37,8 @@ const PaymentMethod = () => {
         <img
           src={
             mainMethod === "other"
-              ? "../../../src/assets/radio_active.svg"
-              : "../../../src/assets/radio.svg"
+              ? "/radio_active.svg"
+              : "/radio.svg"
           }
           alt="다른 수단선택"
           className={styles.radioIcon}
@@ -58,8 +58,8 @@ const PaymentMethod = () => {
             <img
               src={
                 subMethod === "kakao"
-                  ? "../../../src/assets/radio_active.svg"
-                  : "../../../src/assets/radio.svg"
+                  ? "/radio_active.svg"
+                  : "/radio.svg"
               }
               alt="카카오페이 선택"
               className={styles.radioIcon}
@@ -77,8 +77,8 @@ const PaymentMethod = () => {
             <img
               src={
                 subMethod === "naver"
-                  ? "../../../src/assets/radio_active.svg"
-                  : "../../../src/assets/radio.svg"
+                  ? "/radio_active.svg"
+                  : "/radio.svg"
               }
               alt="네이버페이 선택"
               className={styles.radioIcon}

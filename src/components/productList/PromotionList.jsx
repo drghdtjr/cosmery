@@ -1,7 +1,7 @@
 import React from "react";
-import Promotion from "../../products/Promotion";
+import Promotion from "../products/Promotion";
 import styles from "./PromotionList.module.css";
-import { promotionData } from "../../products/productData";
+import { promotionData } from "../data/productData.js";
 
 const PromotionList = () => {
   return (

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./SideContent1.module.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import calendarIcon from "../../../../assets/calendar.svg";
+import calendarIcon from "/calendar.svg";
 import TableBody1 from "../tableBody/TableBody1.jsx";
 import TableBody2 from "../tableBody/TableBody2.jsx";
 import TableBody4 from "../tableBody/TableBody4.jsx";

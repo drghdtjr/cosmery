@@ -12,7 +12,7 @@ function ReviewItem({ review }) {
           {Array.from({ length: review.rating }, (_, index) => (
             <img
               key={index}
-              src="../../../src/assets/starRating.svg"
+              src="/starRating.svg"
               alt="star"
             />
           ))}

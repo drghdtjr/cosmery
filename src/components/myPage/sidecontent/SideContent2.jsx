@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import styles from "./SideContent2.module.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import calendarIcon from "../../../../assets/calendar.svg"; // 본인 아이콘 경로로 바꿔주세요
+import calendarIcon from "/calendar.svg";
 import TableBody3 from "../tableBody/TableBody3.jsx";
 
 const SideContent2 = ({ title, couponCount, head1, head2, head3, head4, data }) => {

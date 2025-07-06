@@ -17,11 +17,11 @@ const Login = () => {
           </div>
           <div className={styles.loginBox}>
             <div className={styles.idBox}>
-                <img src="../../src/assets/id_input.svg" alt="아이디입력" />
+                <img src="/id_input.svg" alt="아이디입력" />
                 <input type="text" placeholder="아이디" />
             </div>
             <div className={styles.pwdBox}>
-                <img src="../../src/assets/pwd_input.svg" alt="아이디입력" />
+                <img src="/pwd_input.svg" alt="아이디입력" />
                 <input type="password" placeholder="비밀번호" />
             </div>
             <button className={styles.loginBtn}>로그인</button>
@@ -37,9 +37,9 @@ const Login = () => {
               <span className={styles.line}></span>
             </div>
             <div className={styles.easyLogin}>
-              <div><img src="../../src/assets/kakao.png" alt="카카오로그인" /></div>
-              <div><img src="../../src/assets/google.png" alt="구글로그인" /></div>
-              <div><img src="../../src/assets/naver.png" alt="네이버로그인" /></div>
+              <div><img src="/kakao.png" alt="카카오로그인" /></div>
+              <div><img src="/google.png" alt="구글로그인" /></div>
+              <div><img src="/naver.png" alt="네이버로그인" /></div>
             </div>
           </div>
         </div>

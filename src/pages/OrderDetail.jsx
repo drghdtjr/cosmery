@@ -1,13 +1,13 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import styles from "../components/order/OrderDetail.module.css";
-import OrderProduct from "../components/order/orderProduct/OrderProduct.jsx";
-import ShippingAddressForm from "../components/shippingAddress/shippingAddrForm/ShippingAddressForm.jsx";
-import DeliveryRequestForm from "../components/order/deliveryRequestForm/DeliveryRequestForm.jsx";
-import CouponBox from "../components/order/couponBox/CouponBox.jsx";
-import PaymentMethod from "../components/order/paymentMethod/PaymentMethod.jsx";
+import OrderProduct from "../components/order/OrderProduct.jsx";
+import ShippingAddressForm from "../components/shippingAddress/ShippingAddressForm.jsx";
+import DeliveryRequestForm from "../components/order/DeliveryRequestForm.jsx";
+import CouponBox from "../components/order/CouponBox.jsx";
+import PaymentMethod from "../components/order/PaymentMethod.jsx";
 import { useState } from "react";
-import OrderSummary from "../components/order/orderSummary/OrderSummary.jsx";
+import OrderSummary from "../components/order/OrderSummary.jsx";
 
 const OrderDetail = () => {
   const location = useLocation();
@@ -33,8 +33,8 @@ const OrderDetail = () => {
                 <img
                   src={
                     showList === false
-                      ? "../../../src/assets/arrow_up.svg"
-                      : "../../../src/assets/arrow_down.svg"
+                      ? "/arrow_up.svg"
+                      : "/arrow_down.svg"
                   }
                   alt={showList === false ? "열기" : "닫기"}
                   onClick={handleToggle}

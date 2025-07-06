@@ -10,12 +10,12 @@ const TabInquiry = () => {
       <div className={styles.tabInquiryContent}>
         <div>
           <a href="">
-            <img src="../../../src/assets/faq_img.png" alt="faq" />
+            <img src="/faq_img.png" alt="faq" />
           </a>
         </div>
         <div>
           <a href="">
-            <img src="../../../src/assets/chat_img.png" alt="chat" />
+            <img src="/chat_img.png" alt="chat" />
           </a>
         </div>
       </div>

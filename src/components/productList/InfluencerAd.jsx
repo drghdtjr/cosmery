@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from "./InfluencerAd.module.css";
-import Ad from "../../products/Ad";
-import AddToCartButton from "../../cart/addToCartButton/AddToCartButton";
-import WishButton from "../../wish/WishButton";
-import { productData } from "../../products/productData";
+import Ad from "../products/Ad";
+import AddToCartButton from "../cart/AddToCartButton";
+import WishButton from "../cart/WishButton";
+import { productData } from "../data/productData.js";
 
 const InfluencerAd = () => {
   const [showCart, setShowCart] = useState(false);
@@ -19,7 +19,7 @@ const InfluencerAd = () => {
       {showWish && <WishButton onClose={closeWish} />}
 
       <div className={styles.adBanner}>
-        <img src="../../src/assets/ad/1.jpg" alt="광고 배너" />
+        <img src="/ad/1.jpg" alt="광고 배너" />
       </div>
 
       <div className={styles.adDetail}>
@@ -27,11 +27,11 @@ const InfluencerAd = () => {
           <h2 style={{ fontSize: "28px", fontWeight: "400" }}>beauty_hana의 리얼 후기!</h2>
           <div className={styles.review}>
             <div>
-              <img src="../../src/assets/review.svg" alt="리뷰아이콘" />
+              <img src="/review.svg" alt="리뷰아이콘" />
               <span>"여름에도 건조하지 않게 촉촉하게 유지되어요!"</span>
             </div>
             <div>
-              <img src="../../src/assets/review.svg" alt="리뷰아이콘" />
+              <img src="/review.svg" alt="리뷰아이콘" />
               <span>"물처럼 가볍고, 백탁 없고 밀리지 않아요!"</span>
             </div>
           </div>

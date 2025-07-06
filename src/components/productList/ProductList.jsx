@@ -1,9 +1,9 @@
 import styles from "./ProductList.module.css";
-import Product1 from "../../products/Product1";
+import Product1 from "../products/Product1";
 import { useState } from "react";
-import AddToCartButton from "../../cart/addToCartButton/AddToCartButton";
-import WishButton from "../../wish/WishButton";
-import { productData } from "../../products/productData";
+import AddToCartButton from "../cart/AddToCartButton";
+import WishButton from "../cart/WishButton";
+import { productData } from "../data/productData.js";
 
 const ProductList = ({ title }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -31,10 +31,10 @@ const ProductList = ({ title }) => {
         <h2 style={{ fontSize: "28px", fontWeight: "400" }}>{title}</h2>
         <div className={styles.slideNav}>
           <button type="button" onClick={clickLeft}>
-            <img src="../../src/assets/left.svg" alt="button" />
+            <img src="/left.svg" alt="button" />
           </button>
           <button type="button" onClick={clickRight}>
-            <img src="../../src/assets/right.svg" alt="button" />
+            <img src="/right.svg" alt="button" />
           </button>
         </div>
       </div>

@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "./WishButton.module.css";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import styles from "./AddToCartButton.module.css";
 
-const WishButton = ({ onClose }) => {
+const AddToCartButton = ({ onClose }) => {
   useEffect(() => {
     const scrollY = window.scrollY;
 
@@ -21,24 +20,27 @@ const WishButton = ({ onClose }) => {
       window.scrollTo(0, scrollY);
     };
   }, []);
+
   return (
     <div className={styles.popupArea}>
       <div className={styles.popupInner}>
         <div className={styles.popupTop}>
           <strong>상품 추가 완료</strong>
           <button type="button" onClick={onClose}>
-            <img src="../../src/assets/close.svg" alt="close" />
+            <img src="/close.svg" alt="close" />
           </button>
         </div>
         <div className={styles.popupContents}>
-          <p>추가된 상품을 확인하시겠습니까?</p>
+          <p>상품을 장바구니에 담았습니다.</p>
           <div className={styles.popupNav}>
             <button className={styles.nav1} type="button" onClick={onClose}>
               쇼핑 계속하기
             </button>
-            <button className={styles.nav2} type="button">
-              보러가기
-            </button>
+            <a href="/order">
+              <button className={styles.nav2} type="button">
+                장바구니
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -46,4 +48,4 @@ const WishButton = ({ onClose }) => {
   );
 };
 
-export default WishButton;
+export default AddToCartButton;

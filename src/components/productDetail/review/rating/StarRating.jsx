@@ -7,9 +7,9 @@ const StarRating = ({ score }) => {
     .map((_, i) => (
       <span key={i}>
         {i < fullStars ? (
-          <img src="../../../src/assets/starRating.svg" alt="star" />
+          <img src="/starRating.svg" alt="star" />
         ) : (
-          <img src="../../../src/assets/starRating_empty.svg" alt="star" />
+          <img src="/starRating_empty.svg" alt="star" />
         )}
       </span>
     ));

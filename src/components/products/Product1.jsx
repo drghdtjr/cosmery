@@ -34,12 +34,12 @@ const Product1 = ({ clickCart, clickWish, data }) => {
         <ul onMouseEnter={() => setMouseover(true)} onMouseLeave={() => setMouseover(false)}>
           <li>
             <button type="button" onClick={clickCart}>
-              <img src="../../src/assets/bag.svg" alt="장바구니" />
+              <img src="/bag.svg" alt="장바구니" />
             </button>
           </li>
           <li>
             <button type="button" onClick={clickWish}>
-              <img src="../../src/assets/favorite.svg" alt="찜하기" />
+              <img src="/favorite.svg" alt="찜하기" />
             </button>
           </li>
         </ul>

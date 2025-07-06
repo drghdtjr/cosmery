@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ProductCard from "../products/ProductCard.jsx"
 import { productData } from "../data/productData.js";
 import Pagination from "./Pagination.jsx";
 import AddToCartButton from "../cart/AddToCartButton.jsx";
 import WishButton from "../cart/WishButton.jsx";
+import Product1 from "../products/Product1.jsx";
 
 const ProductGrid = () => {
   const [sortType, setSortType] = useState("인기순");
@@ -57,7 +57,7 @@ const ProductGrid = () => {
 
       <ProductList>
         {currentItems.map((product) => (
-          <ProductCard
+          <Product1
             key={product.id}
             clickCart={openCart}
             clickWish={openWish}
