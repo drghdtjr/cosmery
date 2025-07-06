@@ -1,15 +1,13 @@
-// src/data/categoryData.js
-
 const categoryData = [
   {
     name: "스킨케어",
     subcategories: [
       "토너",
-      "에센스 / 앰플",
+      "에센스",
       "세럼",
-      "로션 / 크림",
+      "로션",
       "아이크림",
-      "수분 / 진정 케어",
+      "수분 케어",
     ],
   },
   {
@@ -20,14 +18,14 @@ const categoryData = [
     name: "클렌징",
     subcategories: [
       "클렌징 오일",
-      "클렌징 폼 / 젤",
+      "클렌징 폼",
       "클렌징 워터",
       "립 & 아이 리무버",
     ],
   },
   {
     name: "바디 케어",
-    subcategories: ["바디워시", "바디로션 / 크림", "바디스크럽", "핸드크림"],
+    subcategories: ["바디워시", "바디로션", "바디스크럽", "핸드크림"],
   },
   {
     name: "헤어 케어",
@@ -41,9 +39,9 @@ const categoryData = [
     name: "뷰티 소품",
     subcategories: [
       "메이크업 브러쉬",
-      "퍼프 / 스펀지",
+      "퍼프",
       "스킨케어 도구",
-      "거울 / 파우치",
+      "파우치",
     ],
   },
 ];
