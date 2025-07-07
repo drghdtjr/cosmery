@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
-import styles from './PaymentMethod.module.css'
+import './paymentMethod.css'
 
 const PaymentMethod = () => {
   const [mainMethod, setMainMethod] = useState("card");
   const [subMethod, setSubMethod] = useState("");
   return (
-    <div className={styles.radioGroup}>
-      <label className={styles.radioLabel}>
+    <div className="radioGroup">
+      <label className="radioLabel">
         <input
           type="radio"
           name="payment"
@@ -22,11 +22,11 @@ const PaymentMethod = () => {
               : "/radio.svg"
           }
           alt="카드 선택"
-          className={styles.radioIcon}
+          className="radioIcon"
         />
         신용카드 결제
       </label>
-      <label className={styles.radioLabel}>
+      <label className="radioLabel">
         <input
           type="radio"
           name="payment"
@@ -41,13 +41,13 @@ const PaymentMethod = () => {
               : "/radio.svg"
           }
           alt="다른 수단선택"
-          className={styles.radioIcon}
+          className="radioIcon"
         />
         다른결제 수단
       </label>
       {mainMethod === "other" && (
-        <div className={styles.subMethods}>
-          <label className={styles.radioLabel}>
+        <div className="subMethods">
+          <label className="radioLabel">
             <input
               type="radio"
               name="subPayment"
@@ -62,11 +62,11 @@ const PaymentMethod = () => {
                   : "/radio.svg"
               }
               alt="카카오페이 선택"
-              className={styles.radioIcon}
+              className="radioIcon"
             />
             카카오페이
           </label>
-          <label className={styles.radioLabel}>
+          <label className="radioLabel">
             <input
               type="radio"
               name="subPayment"
@@ -81,7 +81,7 @@ const PaymentMethod = () => {
                   : "/radio.svg"
               }
               alt="네이버페이 선택"
-              className={styles.radioIcon}
+              className="radioIcon"
             />
             네이버페이
           </label>

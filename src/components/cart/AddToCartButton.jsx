@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./AddToCartButton.module.css";
+import "./AddToCartButton.css";
 
 const AddToCartButton = ({ onClose }) => {
   useEffect(() => {
@@ -22,22 +22,22 @@ const AddToCartButton = ({ onClose }) => {
   }, []);
 
   return (
-    <div className={styles.popupArea}>
-      <div className={styles.popupInner}>
-        <div className={styles.popupTop}>
+    <div className="popupArea">
+      <div className="popupInner">
+        <div className="popupTop">
           <strong>상품 추가 완료</strong>
           <button type="button" onClick={onClose}>
             <img src="/close.svg" alt="close" />
           </button>
         </div>
-        <div className={styles.popupContents}>
+        <div className="popupContents">
           <p>상품을 장바구니에 담았습니다.</p>
-          <div className={styles.popupNav}>
-            <button className={styles.nav1} type="button" onClick={onClose}>
+          <div className="popupNav">
+            <button className="nav1" type="button" onClick={onClose}>
               쇼핑 계속하기
             </button>
             <a href="/order">
-              <button className={styles.nav2} type="button">
+              <button className="nav2" type="button">
                 장바구니
               </button>
             </a>

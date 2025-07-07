@@ -1,0 +1,189 @@
+.contentWrapper {
+  max-width: 62.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contentTitle {
+  width: 100%;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.couponArea {
+  width: 100%;
+  height: auto;
+  padding: 1.25rem 0;
+  background: var(--bg-color3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.125rem;
+}
+.couponInfo1 {
+  font-size: 1.375rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+.couponInfo2 {
+  margin-bottom: 1.875rem;
+}
+.couponInfo2 > span {
+  font-size: 1.375rem;
+}
+.count {
+  color: var(--primary-color);
+  margin-right: 0.125rem;
+}
+.addCoupon {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.addCoupon > input {
+  width: 18.75rem;
+  height: 2.4375rem;
+  padding: 0.625rem 0 0.625rem 0.625rem;
+  border: 1px solid var(--border-color1);
+}
+.addCoupon > button {
+  width: 4rem;
+  height: 2.4375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  color: var(--bg-color1);
+  font-size: 1rem;
+}
+
+.table {
+  width: 100%;
+  margin-top: 1.25rem;
+  border-collapse: collapse;
+}
+.tableHead th {
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+.bodyContent td {
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color2);
+  text-align: center;
+}
+.emptyContent {
+  height: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.emptyContent > span {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    max-width: 90%;
+  }
+  
+  .addCoupon > input {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    max-width: 95%;
+    padding: 1rem 0;
+  }
+  
+  .contentTitle {
+    font-size: 1.5rem;
+    padding: 0 1rem 1rem 1rem;
+  }
+  
+  .couponArea {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .couponInfo1,
+  .couponInfo2 > span {
+    font-size: 1.25rem;
+  }
+  
+  .addCoupon {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .addCoupon > input {
+    width: 100%;
+    max-width: 20rem;
+  }
+  
+  .tableHead th,
+  .bodyContent td {
+    font-size: 0.8125rem;
+    padding: 0.5rem;
+  }
+  
+  .emptyContent {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentWrapper {
+    max-width: 100%;
+    padding: 0.75rem 0;
+  }
+  
+  .contentTitle {
+    font-size: 1.25rem;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+  }
+  
+  .couponArea {
+    padding: 0.75rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .couponInfo1,
+  .couponInfo2 > span {
+    font-size: 1.125rem;
+  }
+  
+  .addCoupon > input {
+    max-width: 15rem;
+  }
+  
+  .tableHead th,
+  .bodyContent td {
+    font-size: 0.75rem;
+    padding: 0.375rem;
+  }
+  
+  .emptyContent {
+    height: 12rem;
+  }
+  
+  .emptyContent > span {
+    font-size: 0.6875rem;
+  }
+} 

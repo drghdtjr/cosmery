@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import styles from "./SideContent1.module.css";
+import React, { useState, useRef } from "react";
+import "./sideContent1.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import calendarIcon from "/calendar.svg";
@@ -45,32 +45,31 @@ const SideContent1 = ({ title, head1, head2, head3, head4, data, type }) => {
   };
 
   return (
-    <div className={styles.contentWrapper}>
-      <h2 className={styles.contentTitle}>{title}</h2>
-      <div className={styles.contentFilter}>
-        <div className={styles.filterTitle}>조회 기간</div>
-        <div className={styles.buttonFilter}>
-          {["1주일", "1개월", "3개월", "6개월"].map((label) => (
-            <button
-              type="button"
-              key={label}
-              onClick={() => handleRangeClick(label)}
-              className={`${styles.rangeButton} ${
-                activeRange === label ? styles.active : ""
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        <div className={styles.calendarFilter}>
-          <div className={styles.customDateInput}>
+    <div className="contentWrapper">
+      <h2 className="contentTitle">{title}</h2>
+      <div className="contentFilter">
+          <div className="filterTitle">조회 기간</div>
+          <div className="buttonFilter">
+            {["1주일", "1개월", "3개월", "6개월"].map((label) => (
+              <button
+                type="button"
+                key={label}
+                onClick={() => handleRangeClick(label)}
+                className={`rangeButton ${
+                  activeRange === label ? "active" : ""
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        <div className="calendarFilter">
+          <div className="customDateInput">
             <img
               src={calendarIcon}
               alt="달력 아이콘"
               onClick={() => startRef.current.setFocus()}
-              className={styles.calendarIcon}
+              className="calendarIcon"
             />
             <DatePicker
               selected={startDate}
@@ -80,19 +79,19 @@ const SideContent1 = ({ title, head1, head2, head3, head4, data, type }) => {
               endDate={endDate}
               dateFormat="yyyy.MM.dd"
               ref={startRef}
-              wrapperClassName={styles.hiddenDatePicker}
-              className={styles.customDatePicker}
+              wrapperClassName="hiddenDatePicker"
+              className="customDatePicker"
             />
           </div>
 
           <span>~</span>
 
-          <div className={styles.customDateInput}>
+          <div className="customDateInput">
             <img
               src={calendarIcon}
               alt="달력 아이콘"
               onClick={() => endRef.current.setFocus()}
-              className={styles.calendarIcon}
+              className="calendarIcon"
             />
             <DatePicker
               selected={endDate}
@@ -103,17 +102,17 @@ const SideContent1 = ({ title, head1, head2, head3, head4, data, type }) => {
               minDate={startDate}
               dateFormat="yyyy.MM.dd"
               ref={endRef}
-              wrapperClassName={styles.hiddenDatePicker}
-              className={styles.customDatePicker}
+              wrapperClassName="hiddenDatePicker"
+              className="customDatePicker"
             />
           </div>
         </div>
 
-        <button className={styles.queryButton}>조회</button>
+        <button className="queryButton">조회</button>
       </div>
 
-      <table className={styles.table}>
-        <thead className={styles.tableHead}>
+      <table className="table">
+        <thead className="tableHead">
           <tr>
             <th>{head1}</th>
             <th>{head2}</th>

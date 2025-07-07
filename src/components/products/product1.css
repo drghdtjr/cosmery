@@ -2,18 +2,18 @@
   position: relative;
 }
 .product1-wrapper {
-  width: 200px;
+  width: 12.5rem;
   display: block;
   outline: none;
 }
 .product1-detail-wrapper {
-  width: 200px;
+  width: 12.5rem;
   display: flex;
   flex-direction: column;
 }
 .photo {
   width: 100%;
-  height: 225px;
+  height: 14.0625rem;
   position: relative;
 }
 .photo img {
@@ -24,21 +24,21 @@
 .product1-detail {
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 .product1-detail > span {
-  font-size: 12px;
-  color: #777;
+  font-size: 0.75rem;
+  color: var(--secondary-color);
 }
 .product1-detail > p {
-  font-size: 14px;
-  margin: 5px 0;
+  font-size: 0.875rem;
+  margin: 0.3125rem 0;
 }
 .product1-detail > div span {
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
-  margin-right: 2px;
+  margin-right: 0.125rem;
 }
 
 .over ul {
@@ -48,7 +48,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0.625rem;
+  z-index: 10;
 }
 .over {
   opacity: 0;
@@ -61,4 +62,50 @@
 .over.active {
   opacity: 1;
   pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .product1-wrapper,
+  .product1-detail-wrapper {
+    width: 10rem;
+  }
+  
+  .photo {
+    height: 11.25rem;
+  }
+  
+  .product1-detail > span {
+    font-size: 0.6875rem;
+  }
+  
+  .product1-detail > p {
+    font-size: 0.8125rem;
+  }
+  
+  .product1-detail > div span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product1-wrapper,
+  .product1-detail-wrapper {
+    width: 8rem;
+  }
+  
+  .photo {
+    height: 9rem;
+  }
+  
+  .product1-detail > span {
+    font-size: 0.625rem;
+  }
+  
+  .product1-detail > p {
+    font-size: 0.75rem;
+  }
+  
+  .product1-detail > div span {
+    font-size: 0.875rem;
+  }
 }

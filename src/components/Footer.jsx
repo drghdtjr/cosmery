@@ -54,7 +54,6 @@ const Footer = () => {
 
 export default Footer;
 
-// Styled Components
 const FootWrap = styled.div`
   width: 100%;
   background: #eee;
@@ -74,8 +73,17 @@ const FootTop = styled.div`
 
 const FootInner = styled.div`
   width: 75rem;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem;
+  }
 `;
 
 const FootNav1 = styled.ul`
@@ -83,26 +91,43 @@ const FootNav1 = styled.ul`
   align-items: center;
   gap: 1.875rem;
   padding: 1rem 0;
+
   li {
     color: var(--secondary-color);
     font-size: 0.875rem;
   }
-  `;
-  
-  const FootNav2 = styled.ul`
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+`;
+
+const FootNav2 = styled.ul`
   display: flex;
   align-items: center;
   gap: 1.875rem;
+
   li {
     color: var(--secondary-color);
     font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
   }
 `;
 
 const FootBottom = styled.div`
   width: 75rem;
-  padding: 3rem 0;
+  max-width: 100%;
+  padding: 3rem 1rem;
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 `;
 
 const FootLeft = styled.div`
@@ -115,18 +140,24 @@ const FootRight = styled.div`
 
 const FootTitle = styled.p`
   margin-bottom: 0.625rem;
+
   strong {
     font-weight: 500;
+    font-size: 1rem;
   }
 `;
 
 const FootText = styled.p`
-  color: #777;
+  color: var(--secondary-color);
   font-size: 0.75rem;
   margin-bottom: 0.25rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 `;
 
 const StyledA = styled.a`
   font-size: 0.875rem;
-  color: #777;
+  color: var(--secondary-color);
 `;

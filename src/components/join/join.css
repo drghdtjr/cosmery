@@ -1,0 +1,55 @@
+.signinWrap {
+  max-width: 67.5rem; 
+  margin: 0 auto;
+}
+
+.signinInner {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8.125rem 0;
+  gap: 1.875rem;
+}
+.signinInner h2{
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.phone {
+  background: var(--text-color);
+  color: var(--bg-color1);
+  width: 25.125rem;
+  height: 3.125rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.kakao {
+  background: #FFEB00;
+  color: #3C1E1E;
+  width: 25.125rem;
+  height: 3.125rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .signinInner {
+    margin: 4rem 0;
+    gap: 1.5rem;
+  }
+
+  .phone,
+  .kakao {
+    width: 90%;
+    max-width: 20rem;
+    font-size: 0.875rem;
+    height: 3rem;
+  }
+  .signinInner h2{
+    font-size: 1.25rem;
+  }
+}

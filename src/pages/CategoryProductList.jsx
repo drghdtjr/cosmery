@@ -3,7 +3,9 @@ import { useParams } from "react-router-dom";
 import CategoryBreadCrumb from "../components/categoryProductList/CategoryBreadCrumb.jsx";
 import CategoryFilterBar from "../components/categoryProductList/CategoryFilterBar.jsx";
 import categoryData from "../components/data/categoryData.js";
-import ProductGrid from "../components/categoryProductList/ProductGrid.jsx"
+import ProductGrid from "../components/categoryProductList/ProductGrid.jsx";
+import "../components/categoryProductList/categoryProductList.css";
+
 
 
 const CategoryProductList = () => {
@@ -13,17 +15,18 @@ const CategoryProductList = () => {
     console.log(category, subcategory);
   }, [category, subcategory]);
 
-  const subCategoryList = categoryData[category]?.subCategory || [];
 
   return (
-    <div>
-      <CategoryBreadCrumb category={category} subCategory={subcategory} />
-      <h2>{category}</h2>
-      <CategoryFilterBar
-        subCategoryInfo={subCategoryList}
-        selectedSubcategory={subcategory}
-      />
-      <ProductGrid />
+    <div className="categoryProductListWrap">
+      <div className="categoryProductListInner">
+        <CategoryBreadCrumb category={category} subCategory={subcategory} />
+        <h2>{category}</h2>
+        <CategoryFilterBar
+          subCategoryInfo={categoryData.find(cat => cat.name === category)?.subcategories || []}
+          selectedSubcategory={subcategory}
+        />
+        <ProductGrid />
+      </div>
     </div>
   );
 };

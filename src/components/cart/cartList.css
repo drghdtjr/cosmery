@@ -1,0 +1,107 @@
+
+.tableTitle {
+  width: 43.75rem;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  border-bottom: 1px solid var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tableTitle span{
+  font-size: 1rem;
+}
+
+.titleLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9375rem;
+  width: 5.4375rem;
+  height: auto;
+}
+
+.tableCheckbox {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  border: 1px solid var(--border-color1);
+  accent-color: var(--text-color);
+}
+
+.titleButton {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color1);
+  color: var(--secondary-color);
+  border-radius: 0.25rem;
+}
+
+.cartTable {
+  width: 43.75rem;
+  height: auto;
+}
+
+.cartHead {
+  width: 100%;
+  height: auto;
+}
+
+.tableRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem 1.25rem 1.875rem;
+  border-bottom: 1px solid var(--border-color2);
+}
+
+.tableRow td:first-child {
+  width: 6.25rem;
+  height: auto;
+}
+
+.itemMeta {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.itemMeta > * {
+  width: 5.625rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 반응형 처리 */
+@media (max-width: 1024px) {
+  .cartTable {
+    width: 100%;
+  }
+
+  .tableRow {
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .itemMeta {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .itemMeta > * {
+    width: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableTitle {
+    display: none;
+  }
+
+  .tableRow {
+    display: none;
+  }
+}

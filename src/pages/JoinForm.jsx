@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../components/join/Form.module.css";
+import "../components/join/form.css";
 
 const JoinForm = () => {
   const [form, setForm] = useState({
@@ -49,10 +49,10 @@ const JoinForm = () => {
   };
 
   return (
-    <div className={styles.formWrapper}>
-      <div className={styles.formInner}>
+    <div className="formWrapper">
+      <div className="formInner">
         <h2>회원가입</h2>
-        <form onSubmit={handleSubmit} className={styles.form}>
+        <form onSubmit={handleSubmit} className="form">
           <span>이름</span>
           <input
             type="text"
@@ -61,7 +61,7 @@ const JoinForm = () => {
             value={form.name}
             onChange={handleChange}
           />
-          {errors.name && <p className={styles.error}>{errors.name}</p>}
+          {errors.name && <p className="error">{errors.name}</p>}
 
           <span>이메일</span>
           <input
@@ -71,7 +71,7 @@ const JoinForm = () => {
             value={form.email}
             onChange={handleChange}
           />
-          {errors.email && <p className={styles.error}>{errors.email}</p>}
+          {errors.email && <p className="error">{errors.email}</p>}
 
           <span>비밀번호</span>
           <input
@@ -81,7 +81,7 @@ const JoinForm = () => {
             value={form.password}
             onChange={handleChange}
           />
-          {errors.password && <p className={styles.error}>{errors.password}</p>}
+          {errors.password && <p className="error">{errors.password}</p>}
 
           <span>비밀번호 확인</span>
           <input
@@ -92,12 +92,12 @@ const JoinForm = () => {
             onChange={handleChange}
           />
           {errors.confirmPassword && (
-            <p className={styles.error}>{errors.confirmPassword}</p>
+            <p className="error">{errors.confirmPassword}</p>
           )}
 
-          <div className={styles.phoneBox}>
+          <div className="phoneBox">
             <span>휴대폰 번호</span>
-            <div className={styles.phoneInner}>
+            <div className="phoneInner">
               <input
                 type="tel"
                 name="phone"
@@ -105,12 +105,12 @@ const JoinForm = () => {
                 value={form.phone}
                 onChange={handleChange}
               />
-              <button className={styles.phoneBtn} type="button">전송</button>
+              <button className="phoneBtn" type="button">전송</button>
             </div>
-            {errors.phone && <p className={styles.error}>{errors.phone}</p>}
+            {errors.phone && <p className="error">{errors.phone}</p>}
           </div>
 
-          <label className={styles.checkboxLabel}>
+          <label className="checkboxLabel">
             <input
               type="checkbox"
               name="agree"
@@ -119,9 +119,9 @@ const JoinForm = () => {
             />
             이용약관에 동의합니다
           </label>
-          {errors.agree && <p className={styles.error}>{errors.agree}</p>}
+          {errors.agree && <p className="error">{errors.agree}</p>}
 
-          <button type="submit" className={styles.submitBtn}>
+          <button type="submit" className="submitBtn">
             가입하기
           </button>
         </form>

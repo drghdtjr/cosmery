@@ -1,67 +1,39 @@
+// SearchBar.jsx
 import React from "react";
-import styled from "styled-components";
+import "./search.css";
 
-const SearchBar = ({ keyword, setKeyword, onSearch, onFocus, isExpanded }) => {
+const SearchBar = ({ keyword, setKeyword, onSearch, onFocus, isExpanded, isMobile, isFullscreen, setIsFullscreen }) => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") onSearch();
   };
+  
+  let wrapperClass = "searchBarWrapper";
+  if (isExpanded || (isMobile && isFullscreen)) wrapperClass += " expanded";
+  if (isMobile && isFullscreen) wrapperClass += " fullscreen";
 
   return (
-    <Wrapper isExpanded={isExpanded}>
-      <Input
+    <div className={wrapperClass}>
+      <input
         type="text"
+        className="searchInput"
         placeholder="찾으시는 상품을 검색해보세요!"
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
         onKeyDown={handleKeyDown}
         onFocus={onFocus}
+        style={isMobile && !isFullscreen ? { display: "none" } : {}}
       />
-      <Button type="button" onClick={onSearch}>
+      <button type="button" className="searchButton" onClick={() => {
+        if (isMobile && !isFullscreen) {
+          setIsFullscreen(true);
+        } else {
+          onSearch();
+        }
+      }}>
         <img src="/search.svg" alt="search" />
-      </Button>
-    </Wrapper>
+      </button>
+    </div>
   );
 };
 
 export default SearchBar;
-
-// styled-components
-
-const Wrapper = styled.div`
-  width: 25.125rem;
-  height: 2.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid transparent;
-  border-bottom-color: var(--text-color);
-
-  ${(props) =>
-    props.isExpanded &&
-    `
-    border-color: var(--primary-color);
-    border-bottom-color: var(--border-color2);
-    border-top-left-radius: 0.625rem;
-    border-top-right-radius: 0.625rem;
-  `}
-`;
-
-const Input = styled.input`
-  flex: 1;
-  margin-left: 0.625rem;
-  border: none;
-  outline: none;
-  font-size: 0.875rem;
-  background: transparent;
-`;
-
-const Button = styled.button`
-  width: 2.75rem;
-  height: 2.75rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;

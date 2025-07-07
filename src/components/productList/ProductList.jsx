@@ -1,6 +1,6 @@
-import styles from "./ProductList.module.css";
+import "./productList.css";
 import Product1 from "../products/Product1";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddToCartButton from "../cart/AddToCartButton";
 import WishButton from "../cart/WishButton";
 import { productData } from "../data/productData.js";
@@ -9,13 +9,39 @@ const ProductList = ({ title }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showCart, setShowCart] = useState(false);
   const [showWish, setShowWish] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(5); // 한 화면에 보이는 제품 수
+  const [slideGap, setSlideGap] = useState(1.25); // 슬라이드 간격
+
+  const updateVisibleCount = () => {
+    const width = window.innerWidth;
+    if (width <= 480) {
+      setVisibleCount(1);
+      setSlideGap(0.75);
+    } else if (width <= 768) {
+      setVisibleCount(2);
+      setSlideGap(1);
+    } else if (width <= 1024) {
+      setVisibleCount(3);
+      setSlideGap(1.25);
+    } else {
+      setVisibleCount(5);
+      setSlideGap(1.25);
+    }
+  };
+
+  useEffect(() => {
+    updateVisibleCount();
+    window.addEventListener("resize", updateVisibleCount);
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
 
   const clickLeft = () => {
     setCurrentIdx((prev) => Math.max(prev - 1, 0));
   };
 
   const clickRight = () => {
-    setCurrentIdx((prev) => Math.min(prev + 1, (productData.length / 2) - 1));
+    const maxSlide = Math.max(productData.length - visibleCount, 0);
+    setCurrentIdx((prev) => Math.min(prev + 1, maxSlide));
   };
 
   const openCart = () => setShowCart(true);
@@ -23,13 +49,16 @@ const ProductList = ({ title }) => {
   const openWish = () => setShowWish(true);
   const closeWish = () => setShowWish(false);
 
+  // 슬라이드 트랙의 transform 계산
+  const slideTransform = currentIdx * (12.5 + slideGap);
+
   return (
-    <div className={styles.recPrdtWrapper}>
+    <div className="recPrdtWrapper">
       {showCart && <AddToCartButton onClose={closeCart} />}
       {showWish && <WishButton onClose={closeWish} />}
-      <div className={styles.listTop}>
-        <h2 style={{ fontSize: "28px", fontWeight: "400" }}>{title}</h2>
-        <div className={styles.slideNav}>
+      <div className="listTop">
+        <h2>{title}</h2>
+        <div className="slideNav">
           <button type="button" onClick={clickLeft}>
             <img src="/left.svg" alt="button" />
           </button>
@@ -39,15 +68,21 @@ const ProductList = ({ title }) => {
         </div>
       </div>
 
-      <div className={styles.listWrapper}>
+      <div className="listWrapper">
         <div
-          className={styles.slideTrack}
-          style={{ transform: `translateX(-${currentIdx * 220}px)` }}
+          className="slideTrack"
+          style={{
+            transform: `translateX(-${slideTransform}rem)`,
+          }}
         >
-          {productData
-            .map((data, index) => (
-              <Product1 key={index} clickCart={openCart} clickWish={openWish} data={data} />
-            ))}
+          {productData.map((data, index) => (
+            <Product1
+              key={index}
+              clickCart={openCart}
+              clickWish={openWish}
+              data={data}
+            />
+          ))}
         </div>
       </div>
     </div>

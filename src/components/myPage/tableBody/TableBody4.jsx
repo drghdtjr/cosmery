@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "../sidecontent/SideContent1.module.css";
-import { useEffect, useState } from "react";    
+import { useState } from "react";    
 import Modal from "../modal/Modal";
 import ReviewWriteModal from "../modal/ReviewWriteModal";
 
@@ -8,9 +7,6 @@ import ReviewWriteModal from "../modal/ReviewWriteModal";
 const TableBody4 = ({ item1, item2, item3, item4, item5, item6, item7 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isReviewWriteModalOpen, setIsReviewWriteModalOpen] = useState(false);
-  useEffect(() => {
-    console.log(item1, item2, item3, item4, item5, item6, item7);
-  }, [item1, item2, item3, item4, item5, item6, item7]);
   return (
     <>
       {isModalOpen && (
@@ -25,11 +21,11 @@ const TableBody4 = ({ item1, item2, item3, item4, item5, item6, item7 }) => {
           onClose={() => setIsReviewWriteModalOpen(false)}
         />
       )}
-      <tr className={styles.bodyContent}>
+      <tr className="bodyContent">
         <td>
           {item1}
           <br />
-          <span style={{ fontSize: "12px", color: "#999" }}>{item2}</span>
+          <span style={{ fontSize: "0.75rem", color: "#999" }}>{item2}</span>
         </td>
         <td>{item3}</td>
         <td>{item4}</td>

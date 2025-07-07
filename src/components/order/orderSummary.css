@@ -1,80 +1,110 @@
-.cartSummWrapper {
-  width: 300px;
-  min-width: 200px;
-  height: auto;
+.orderSummWrapper {
+  width: 22.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
   flex-shrink: 0;
-  padding: 20px 0;
-  flex-shrink: 1;
 }
-.cartSummTop {
+
+.orderSummTop {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 20px;
-  gap: 24px;
-  background: var(--bg-color2);
+  padding: 2.5rem 1.25rem;
+  gap: 1.5rem;
+  background: #d0dce533;
 }
+
 .summTitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
 }
+
 .summDetail {
   width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 13px;
+  gap: 0.8125rem;
 }
+
 .detailAmount {
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .summBottom {
   width: 100%;
   display: flex;
-  padding-top: 10px;
+  padding-top: 0.625rem;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--border-color2);
 }
-.cartSummBottom {
+
+.orderSummBottom {
   width: 100%;
-  height: 50px;
+  height: 3.125rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .summButton1 {
   flex: 1;
   height: 100%;
   border: 1px solid var(--primary-color);
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   background: var(--bg-color1);
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--primary-color);
-  font-size: 16px;
+  font-size: 1rem;
 }
-.summButton2{
+
+.summButton2 {
   flex: 1;
   height: 100%;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0.25rem 0.25rem 0;
   background: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--bg-color1);
-  font-size: 16px;
+  font-size: 1rem;
 }
+
+@media (max-width: 1024px) {
+  .orderSummWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* 태블릿 이하 */
+@media (max-width: 768px) {
+  .orderSummWrapper {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+  .summButton1,
+  .summButton2 {
+    font-size: 0.875rem;
+  }
+
+  .orderSummTop {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+} 

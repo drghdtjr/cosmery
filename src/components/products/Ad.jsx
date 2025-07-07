@@ -5,11 +5,11 @@ import { useState } from "react";
 const Ad = ({ clickCart, clickWish, data }) => {
   const [mouseover, setMouseover] = useState(false);
   return (
-    <div className="product3-container">
-      <a href="#" className="product3-wrapper">
-        <div className="product3-detail-wrapper">
+    <div className="ad-container">
+      <a href="#" className="ad-wrapper">
+        <div className="ad-detail-wrapper">
           <div
-            className="product3-photo"
+            className="ad-photo"
             onMouseEnter={() => setMouseover(true)}
             onMouseLeave={() => setMouseover(false)}
           >
@@ -29,7 +29,7 @@ const Ad = ({ clickCart, clickWish, data }) => {
               </ul>
             </div>
           </div>
-          <div className="product3-detail">
+          <div className="ad-detail">
             <p>{data.name}</p>
             <div>
               <span>{data.discountedPrice}</span>원

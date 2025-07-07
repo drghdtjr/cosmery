@@ -1,0 +1,61 @@
+/* 기본 스타일 (데스크탑) */
+.radioGroup {
+  width: 38.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radioLabel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.9375rem;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.radioLabel input[type="radio"] {
+  display: none;
+}
+
+.radioIcon {
+  width: 1.0625rem;
+  height: 1.0625rem;
+}
+
+.subMethods {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5rem;
+}
+
+/* 반응형: 태블릿 이하 */
+@media (max-width: 768px) {
+  .radioGroup {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .radioLabel {
+    font-size: 0.875rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .subMethods {
+    padding: 0 1.5rem;
+  }
+}
+
+/* 반응형: 모바일 */
+@media (max-width: 480px) {
+
+  .subMethods {
+    padding: 0 1rem;
+  }
+} 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ItemCell.module.css";
+import "./itemCell.css";
 
 const ItemCell = ({
   checked,
@@ -10,28 +10,28 @@ const ItemCell = ({
   onChangeOption,
 }) => {
   return (
-    <div className={styles.cartItemLeft}>
+    <div className="cartItemLeft">
       {/* 선택 박스 */}
       <input
-        className={styles.cartItemCheckbox}
+        className="cartItemCheckbox"
         type="checkbox"
         checked={checked}
         onChange={onToggle}
       />
       {/* 이미지 */}
       <img
-        className={styles.cartItemImg}
+        className="cartItemImg"
         src="/placeholder-image.webp"
         alt="예시 이미지"
       />
       {/* 상품 정보 */}
-      <div className={styles.cartItemInfo}>
-        <span className={styles.infoTitle}>{name}</span>
+      <div className="cartItemInfo">
+        <span className="infoTitle">{name}</span>
         {optionList && optionList.length > 0 ? (
           <select
             value={option}
             onChange={(e) => onChangeOption(e.target.value)}
-            className={styles.infoSelect}
+            className="infoSelect"
           >
             {optionList.map((opt, idx) => (
               <option key={idx} value={opt}>

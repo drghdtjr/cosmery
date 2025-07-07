@@ -1,39 +1,69 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
 import LNB from "./LNB.jsx";
 import GNB from "./GNB.jsx";
 import SearchContainer from "./search/SearchContainer.jsx";
+import "./header.css";
 
 const Header = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleSearchClick = () => {
+    if (isMobile) {
+      setIsSearchOpen(true);
+    }
+  };
+
+  const handleSearchClose = () => {
+    setIsSearchOpen(false);
+  };
 
   return (
-    <HeaderWrapper>
-      <HeadTop>
+    <header className="header-wrapper">
+      <div className="head-top">
         <GNB />
-      </HeadTop>
-      <HeadMid>
-        <HeadMidLeft>
-          <HamburgerButton
+      </div>
+      <div className="head-mid">
+        <div className="head-mid-left">
+          <button
             type="button"
-            onMouseOver={() => setIsCategoryOpen(true)}
-            className={isCategoryOpen ? "active" : ""}
+            onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+            className={`hamburger-button ${isCategoryOpen ? "active" : ""}`}
           >
-            <HamburgerIcon>
+            <div className="hamburger-icon">
               <span></span>
               <span></span>
               <span></span>
-            </HamburgerIcon>
-          </HamburgerButton>
-          <Logo href="/">
+            </div>
+          </button>
+          <a href="/" className="logo">
             <img src="/logo.png" alt="포트폴리오" />
-          </Logo>
-        </HeadMidLeft>
-        <HeadMidCenter>
-          <SearchContainer />
-        </HeadMidCenter>
-        <HeadMidRight>
-          <NavList>
+          </a>
+        </div>
+        <div className="head-mid-right">
+          {!isMobile && <SearchContainer />}
+          <ul className="nav-list">
+            {isMobile && (
+              <li>
+                <img 
+                  src="/search.svg" 
+                  alt="search" 
+                  onClick={handleSearchClick}
+                  style={{ cursor: 'pointer' }}
+                />
+              </li>
+            )}
             <li>
               <a href="/order">
                 <img src="/my-bag.svg" alt="bag" />
@@ -44,119 +74,25 @@ const Header = () => {
                 <img src="/my-page.svg" alt="mypage" />
               </a>
             </li>
-          </NavList>
-        </HeadMidRight>
-      </HeadMid>
+          </ul>
+        </div>
+      </div>
+      {isMobile && isSearchOpen && (
+        <div className="mobile-search-overlay">
+          <div className="mobile-search-container">
+            <button className="mobile-search-close" onClick={handleSearchClose}>
+              &larr;
+            </button>
+            <SearchContainer />
+          </div>
+        </div>
+      )}
       <LNB
         isCategoryOpen={isCategoryOpen}
         setIsCategoryOpen={setIsCategoryOpen}
       />
-    </HeaderWrapper>
+    </header>
   );
 };
 
 export default Header;
-
-const HeaderWrapper = styled.header`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: var(--bg-color1);
-  border-bottom: 1px solid var(--border-color1);
-`;
-
-const HeadTop = styled.div`
-  max-width: 67.5rem;
-  margin: 0 auto;
-  padding-top: 0.625rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
-
-const HeadMid = styled.div`
-  max-width: 67.5rem;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.625rem 0;
-`;
-
-const HeadMidLeft = styled.div`
-  width: 18.75rem;
-  display: flex;
-`;
-
-const HamburgerButton = styled.button`
-  width: 3.375rem;
-  height: 3.375rem;
-  background: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-`;
-
-const HamburgerIcon = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.3125rem;
-  span {
-    width: 1.375rem;
-    height: 0.125rem;
-    background-color: var(--text-color);
-    border-radius: 0.125rem;
-  }
-`;
-
-const Logo = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.75rem;
-  margin-right: auto;
-  margin-top: 0.3125rem;
-`;
-
-const HeadMidCenter = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-`;
-
-const HeadMidRight = styled.div`
-  width: 9.375rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
-
-const NavList = styled.ul`
-  display: flex;
-  align-items: center;
-  li {
-    width: 2.75rem;
-    height: 2.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    img {
-      width: 1.5rem;
-      height: 1.5rem;
-      object-fit: cover;
-    }
-  }
-`;

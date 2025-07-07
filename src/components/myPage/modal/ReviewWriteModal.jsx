@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./modal.module.css";
+import "./modal.css";
 
 const ReviewWriteModal = ({ onClose, onSave }) => {
   const [title, setTitle] = useState("");
@@ -15,27 +15,27 @@ const ReviewWriteModal = ({ onClose, onSave }) => {
   };
 
   return (
-    <div className={styles.modal}>
-      <div className={styles.modalContent}>
+    <div className="modal">
+      <div className="modalContent">
         <h2>리뷰 작성</h2>
         <input
           type="text"
           placeholder="제목을 입력하세요"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className={styles.input}
+          className="input"
         />
         <textarea
           placeholder="리뷰 내용을 입력하세요"
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          className={styles.textarea}
+          className="textarea"
         />
-        <div className={styles.buttonGroup}>
-          <button className={styles.submitButton} onClick={handleSubmit}>
+        <div className="buttonGroup">
+          <button className="submitButton" onClick={handleSubmit}>
             저장
           </button>
-          <button className={styles.closeButton} onClick={onClose}>
+          <button className="closeButton" onClick={onClose}>
             &times;
           </button>
         </div>

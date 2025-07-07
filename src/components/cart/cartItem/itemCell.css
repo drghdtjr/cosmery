@@ -1,37 +1,42 @@
 .cartItemLeft {
-  width: 380px;
-  padding: 0 10px;
+  width: 23.75rem;
+  padding: 0 0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .cartItemCheckbox {
-  width: 17px;
-  height: 17px;
+  width: 1.0625rem;
+  height: 1.0625rem;
   border: 1px solid var(--border-color1);
   accent-color: var(--text-color);
 }
+
 .cartItemImg {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   object-fit: cover;
   flex-shrink: 0;
 }
+
 .cartItemInfo {
-  width: 150px;
+  width: 9.375rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   align-items: flex-start;
 }
+
 .infoTitle {
   width: 100%;
-  font-size: 16px;
+  font-size: 1rem;
 }
+
 .infoSelect {
   width: 100%;
-  padding: 5px 10px;
+  padding: 0.3125rem 0.625rem;
   border: 1px solid var(--border-color2);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   outline: none;
-}
+} 

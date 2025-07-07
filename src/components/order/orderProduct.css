@@ -1,0 +1,145 @@
+.orderProductWrapper {
+  display: flex;
+  width: 100%;
+  height: 8.75rem;
+  padding: 1.25rem;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.orderProductLeft {
+  display: flex;
+  padding: 0 0.625rem;
+  align-items: center;
+  gap: 1.25rem;
+  width: 20.625rem;
+  height: 6.25rem;
+}
+
+.orderProductImg {
+  width: 5.625rem;
+  height: 5.625rem;
+  object-fit: cover;
+}
+
+.orderProductInfo {
+  width: 13.125rem;
+  height: 4.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.orderProductRight {
+  width: 12.125rem;
+  height: 2.0625rem;
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+}
+.orderProductOption, .rightQuantity{
+  font-size: 0.875rem;
+  color: var(--text-color2);
+}
+
+.orderProductRight > * {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightSalePrice {
+  color: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+  .orderProductWrapper {
+    height: auto;
+    min-height: 7rem;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .orderProductLeft {
+    width: 18rem;
+    height: 5.5rem;
+    gap: 1rem;
+  }
+  
+  .orderProductImg {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .orderProductInfo {
+    width: 12rem;
+    height: 4rem;
+    gap: 1rem;
+  }
+  
+  .orderProductRight {
+    width: 10rem;
+    height: 2rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .orderProductWrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .orderProductLeft {
+    width: 100%;
+    height: auto;
+    gap: 0.75rem;
+  }
+  
+  .orderProductImg {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .orderProductInfo {
+    width: 100%;
+    height: auto;
+    gap: 0.75rem;
+  }
+  
+  .orderProductRight {
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .orderProductWrapper {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  
+  .orderProductLeft {
+    gap: 0.5rem;
+  }
+  
+  .orderProductImg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .orderProductInfo {
+    gap: 0.5rem;
+  }
+  
+  .orderProductRight {
+    gap: 0.75rem;
+  }
+} 

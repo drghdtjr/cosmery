@@ -1,11 +1,23 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
+import "./search.css";
 
 const SearchContainer = () => {
   const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleDelete = (id) => {
     setResults((prev) => prev.filter((item) => item.id !== id));
@@ -19,106 +31,62 @@ const SearchContainer = () => {
     ];
     setResults(dummyResults);
     setIsExpanded(true);
+    if (isMobile) setIsFullscreen(true);
   };
 
   const handleBarFocus = () => {
     setIsExpanded(true);
+    if (isMobile) setIsFullscreen(true);
   };
 
+  const handleBack = () => {
+    setIsFullscreen(false);
+    setIsExpanded(false);
+  };
+
+  // Wrapper className 조합
+  let wrapperClass = "searchWrapper";
+  if (isMobile) wrapperClass += " mobile";
+  if (isMobile && isFullscreen) wrapperClass += " fullscreen";
+
   return (
-    <Wrapper
-      onMouseLeave={() => setIsExpanded(false)}
-      onMouseOver={() => setIsExpanded(true)}
+    <div
+      className={wrapperClass}
+      onMouseLeave={() => !isMobile && setIsExpanded(false)}
+      onMouseOver={() => !isMobile && setIsExpanded(true)}
     >
+      {isMobile && isFullscreen && (
+        <button className="search-back-btn" onClick={handleBack}>&larr;</button>
+      )}
       <SearchBar
         keyword={keyword}
         setKeyword={setKeyword}
         onSearch={handleSearch}
         onFocus={handleBarFocus}
-        isExpanded={isExpanded}
+        isExpanded={isExpanded || (isMobile && isFullscreen)}
+        isMobile={isMobile}
+        isFullscreen={isFullscreen}
+        setIsFullscreen={setIsFullscreen}
       />
-      <ResultArea className={isExpanded ? "expand" : "collapse"}>
+      <div className={`searchResultArea ${isExpanded ? "expand" : "collapse"}`}>
         <span>최근 검색어</span>
         {results.length > 0 ? (
           <ul>
             {results.map((item) => (
               <li key={item.id}>
                 {item.name}
-                <CloseButton onClick={() => handleDelete(item.id)}>
+                <button className="searchCloseButton" onClick={() => handleDelete(item.id)}>
                   &times;
-                </CloseButton>
+                </button>
               </li>
             ))}
           </ul>
         ) : (
-          <Placeholder>검색 결과가 없습니다.</Placeholder>
+          <p className="searchPlaceholder">검색 결과가 없습니다.</p>
         )}
-      </ResultArea>
-    </Wrapper>
+      </div>
+    </div>
   );
 };
 
 export default SearchContainer;
-
-// styled-components
-const Wrapper = styled.div`
-    width: 25.125rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-`;
-
-const ResultArea = styled.div`
-  position: absolute;
-  top: 2.75rem;
-  left: 0;
-  width: 100%;
-  height: 21.875rem;
-  background: var(--bg-color3);
-  border-left: 1px solid var(--primary-color);
-  border-right: 1px solid var(--primary-color);
-  border-bottom: 1px solid var(--primary-color);
-  border-bottom-left-radius: 0.625rem;
-  border-bottom-right-radius: 0.625rem;
-  overflow: hidden;
-  transition: max-height 0.1s ease, padding 0.1s ease, opacity 0.1s ease;
-
-  &.expand {
-    max-height: 21.875rem;
-    padding: 1.25rem;
-    opacity: 1;
-  }
-
-  &.collapse {
-    max-height: 0;
-    padding: 0;
-    opacity: 0;
-    border: none;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
-    padding: 0.25rem 0;
-    font-size: 0.875rem;
-    color: var(--secondary-color);
-  }
-`;
-
-const Placeholder = styled.p`
-  font-size: 0.875rem;
-  color: var(--secondary-color);
-`;
-
-const CloseButton = styled.button`
-  margin-left: 0.625rem;
-  font-size: 1rem;
-  color: var(--secondary-color);
-  background: none;
-  border: none;
-  cursor: pointer;
-`;

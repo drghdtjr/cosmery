@@ -1,0 +1,40 @@
+.itemCounter {
+    display: flex;
+    width: 5rem;
+    height: 1.75rem;
+    padding: 0.5rem 0.25rem;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color2);
+    border-radius: 0.25rem;
+    background: var(--bg-color1);
+    font-size: 0.75rem;
+  }
+  .counterBtn {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@media (max-width: 768px) {
+  .itemCounter {
+    width: 100%;
+    padding: 0.375rem 0.25rem;
+    font-size: 0.6875rem;
+  }
+  
+  .counterBtn {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .counterBtn {
+    width: 1rem;
+    height: 1rem;
+  }
+}

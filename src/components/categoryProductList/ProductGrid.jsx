@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import "./categoryProductList.css";
 import { productData } from "../data/productData.js";
 import Pagination from "./Pagination.jsx";
 import AddToCartButton from "../cart/AddToCartButton.jsx";
@@ -31,40 +31,42 @@ const ProductGrid = () => {
   const closeWish = () => setShowWish(false);
 
   return (
-    <ProductGridWrap>
+    <div className="productGridWrap">
       {showCart && <AddToCartButton onClose={closeCart} />}
       {showWish && <WishButton onClose={closeWish} />}
-      <SortList>
-        <SortItem
-          active={sortType === "인기순"}
+      <ul className="sortList">
+        <li
+          className={`sortItem ${sortType === "인기순" ? 'active' : ''}`}
           onClick={() => {
             setSortType("인기순");
             setCurrentPage(1);
           }}
         >
           인기순
-        </SortItem>
-        <SortItem
-          active={sortType === "최신순"}
+        </li>
+        <li
+          className={`sortItem ${sortType === "최신순" ? 'active' : ''}`}
           onClick={() => {
             setSortType("최신순");
             setCurrentPage(1);
           }}
         >
           최신순
-        </SortItem>
-      </SortList>
+        </li>
+      </ul>
 
-      <ProductList>
-        {currentItems.map((product) => (
-          <Product1
-            key={product.id}
-            clickCart={openCart}
-            clickWish={openWish}
-            data={product}
-          />
-        ))}
-      </ProductList>
+      <div className="productListWrap">
+        <div className="productList">
+          {currentItems.map((product) => (
+            <Product1
+              key={product.id}
+              clickCart={openCart}
+              clickWish={openWish}
+              data={product}
+            />
+          ))}
+        </div>
+      </div>
 
       <Pagination
         totalItems={sortedData.length}
@@ -72,42 +74,8 @@ const ProductGrid = () => {
         currentPage={currentPage}
         onPageChange={setCurrentPage}
       />
-    </ProductGridWrap>
+    </div>
   );
 };
 
 export default ProductGrid;
-
-const ProductGridWrap = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-`;
-
-const SortList = styled.ul`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.25rem;
-`;
-
-const SortItem = styled.li`
-  cursor: pointer;
-  color: var(--secondary-color);
-  ${({ active }) =>
-    active &&
-    `
-    color: var(--text-color);
-  `}
-`;
-
-const ProductList = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-`;

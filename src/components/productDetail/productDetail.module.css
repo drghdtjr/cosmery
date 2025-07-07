@@ -1,6 +1,6 @@
 .productDetailWrapper {
   width: 100%;
-  max-width: 1080px;
+  max-width: 67.5rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -10,10 +10,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px;
-  font-size: 14px;
+  gap: 0.625rem;
+  font-size: 0.875rem;
   color: #666;
-  padding: 20px 24px 20px 0;
+  padding: 1.25rem 1.5rem 1.25rem 0;
   cursor: pointer;
 }
 
@@ -21,14 +21,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 60px 0;
+  gap: 1.25rem;
+  padding: 3.75rem 0;
   width: 100%;
   height: auto;
 }
 .productImageWrapper {
-  width: 530px;
-  height: 530px;
+  width: 33.125rem;
+  height: 33.125rem;
 }
 .productImageWrapper img {
   width: 100%;
@@ -36,12 +36,12 @@
   object-fit: cover;
 }
 .productInfoWrapper {
-  width: 530px;
-  height: 530px;
+  width: 33.125rem;
+  height: 33.125rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 36px 0;
+  padding: 2.25rem 0;
 }
 .productInfoHeader {
   display: flex;
@@ -49,21 +49,21 @@
   align-items: center;
 }
 .productInfoHeader h2 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
 }
 .productInfoHeaderButton {
   display: flex;
-  gap: 5px;
+  gap: 0.3125rem;
 }
 .productInfoHeaderButton button {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .productInfoPrice {
   display: flex;
   align-items: flex-end;
-  gap: 20px;
+  gap: 1.25rem;
 }
 .productInfoPriceDiscount {
   display: flex;
@@ -74,36 +74,36 @@
   align-items: flex-end;
 }
 .productInfoPriceOriginal del {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 500;
   color: var(--border-color1);
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
 }
 .productInfoAdditionalInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 24px 36px;
-  gap: 12px;
+  padding: 1.5rem 2.25rem;
+  gap: 0.75rem;
 }
 .productInfoAdditionalInfoDelivery {
   display: flex;
   align-items: center;
 }
 .productInfoAdditionalInfoDeliveryText {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--primary-color);
 }
 .productInfoAdditionalInfoDelivery {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   align-items: flex-start;
   justify-content: center;
 }
 .productInfoAdditionalInfoDelivery span {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--text-color);
 }
@@ -112,19 +112,26 @@
 }
 .productInfoAdditionalInfoCustomer p {
   display: flex;
-  gap: 20px;
-  font-size: 16px;
+  gap: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--text-color);
 }
 .productInfoAdditionalInfoCustomer p span {
   display: flex;
-  gap: 5px;
+  gap: 0.3125rem;
   align-items: center;
   justify-content: center;
 }
 .productInfoAdditionalInfoCustomer p span p {
   color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Montserrat";
+}
+.productInfoAdditionalInfoCustomer p span img{
+  width: 1rem;
+  height: 1rem;
 }
 .productQuantityWrapper {
   background-color: var(--bg-color3);
@@ -133,11 +140,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px;
+  padding: 2.25rem;
 }
 
 .productInfoAdditionalInfoQuantity p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--text-color);
 }
@@ -145,19 +152,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 36px 24px;
+  padding: 2.25rem 1.5rem;
 }
 .productInfoButtonWrapper button {
-  width: 150px;
-  height: 48px;
+  width: 9.375rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   background-color: var(--bg-color1);
   border: 1px solid var(--text-color);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
 }
 .productInfoButtonWrapper button:last-child {
@@ -168,18 +175,18 @@
 .productTabsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .productTabsWrapper .tabList {
   display: flex;
 }
 .productTabsWrapper .tabItem {
   flex: 1;
-  line-height: 50px;
+  line-height: 3.125rem;
   text-align: center;
   border-bottom: 1px solid var(--text-color);
   background-color: var(--bg-color3);
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--text-color);
   cursor: pointer;
 }
@@ -193,8 +200,8 @@
 .tabDescriptionWrapper {
   display: flex;
   flex-direction: column;
-  gap: 200px;
-  padding: 300px 0;
+  gap: 12.5rem;
+  padding: 18.75rem 0;
 }
 .tabDescriptionWrapper img {
   width: 100%;
@@ -210,60 +217,60 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
-  gap: 40px;
+  padding-top: 3.75rem;
+  gap: 2.5rem;
 }
 .tabReviewHeader p {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
 }
 .tabReviewHeader p em {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--primary-color);
   font-style: normal;
 }
 .tabReviewHeaderImg {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   justify-content: center;
   align-items: center;
 }
 .tabReviewHeaderImg img {
-  width: 500px;
-  height: 300px;
+  width: 31.25rem;
+  height: 18.75rem;
   object-fit: cover;
 }
 .tabDetailInfoWrapper {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 60px 0;
+  gap: 2.5rem;
+  padding: 3.75rem 0;
 }
 .tabDetailInfoTable {
   width: 100%;
   border-collapse: collapse;
 }
 .tabDetailInfoRow {
-  height: 32px;
+  height: 2rem;
   border-top: 1px solid var(--border-color1);
 }
 .tabDetailInfoRow:last-child {
   border-bottom: 1px solid var(--border-color1);
 }
 .tabDetailInfoLabel {
-  width: 300px;
+  width: 18.75rem;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 1.25rem;
   background: #e7e7e7;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 .tabDetailInfoValue {
-  width: 740px;
-  padding-left: 20px;
+  width: 46.25rem;
+  padding-left: 1.25rem;
   text-align: left;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 .tabInquiryWrapper {
@@ -271,20 +278,116 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 60px 0;
+  gap: 2.5rem;
+  padding: 3.75rem 0;
 }
 .tabInquiryTitle {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
 }
 .tabInquiryContent {
   display: flex;
-  gap: 20px;
-
+  gap: 1.25rem;
 }
 .tabInquiryContent img {
-  width: 500px;
-  height: 300px;
+  width: 31.25rem;
+  height: 18.75rem;
   object-fit: cover;
+}
+@media (max-width: 768px) {
+  .productSummaryWrapper {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .productImageWrapper,
+  .productInfoWrapper {
+    width: 100%;
+    height: auto;
+  }
+  .tabItem {
+    font-size: 0.75rem;
+  }
+  .productInfoButtonWrapper {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .productInfoButtonWrapper button {
+    width: 100%;
+  }
+  .productInfoHeader h2 {
+    font-size: 1.25rem;
+  }
+  .productInfoHeaderButton {
+    gap: 0.25rem;
+  }
+  .productInfoHeaderButton button {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .productInfoPrice{
+    flex-wrap: wrap;
+  }
+  .productInfoPriceDiscount {
+    font-size: 1.25rem;
+  }
+  .productInfoPriceOriginal {
+    font-size: 1.25rem;
+  }
+  .productInfoAdditionalInfo {
+    padding: 1.25rem;
+  }
+  .productInfoAdditionalInfoDeliveryText{
+    font-size: 0.75rem;
+  }
+  .productInfoAdditionalInfoDelivery span{
+    font-size: 0.75rem;
+  }
+  .productInfoAdditionalInfoCustomer p{
+    font-size: 0.75rem;
+  }
+  .productInfoAdditionalInfoCustomer p span{
+    font-size: 0.75rem;
+  }
+  .productInfoAdditionalInfoCustomer p span p{
+    font-size: 0.75rem;
+  }
+  .productInfoAdditionalInfoCustomer p span img{
+    width: 1rem;
+    height: 1rem;
+  }
+  .tabDescriptionWrapper{
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+  }
+  .tabReviewWrapper, .tabInquiryWrapper{
+    padding: 1.25rem;
+  }
+  .tabReviewHeader{
+    padding-top: 1.25rem;
+  }
+  .tabReviewHeader p{
+    font-size: 1.25rem;
+  }
+  .tabReviewHeader p em{
+    font-size: 1.25rem;
+  }
+  .tabReviewHeaderImg{
+    flex-direction: column;
+  }
+  .tabReviewHeaderImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .tabInquiryTitle{
+    font-size: 1.25rem;
+  }
+  .tabInquiryContent{
+    flex-direction: column;
+  }
+  .tabInquiryContent img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

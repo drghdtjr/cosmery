@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./OrderSummary.module.css";
+import "./orderSummary.css";
 
 const OrderSummary = ({
   totalPrice,
@@ -8,32 +8,32 @@ const OrderSummary = ({
 }) => {
   const finalAmount = totalPrice - totalDiscount + shippingFee;
   return (
-    <div className={styles.orderSummWrapper}>
-      <div className={styles.orderSummTop}>
-        <h3 className={styles.summTitle}>결제 정보</h3>
-        <div className={styles.summDetail}>
-          <div className={styles.detailAmount}>
-            <span className={styles.detailText}>주문금액</span>
-            <span className={styles.detailPrice}>{totalPrice}원</span>
+    <div className="orderSummWrapper">
+      <div className="orderSummTop">
+        <h3 className="summTitle">결제 정보</h3>
+        <div className="summDetail">
+          <div className="detailAmount">
+            <span className="detailText">주문금액</span>
+            <span className="detailPrice">{totalPrice}원</span>
           </div>
-          <div className={styles.detailAmount}>
-            <span className={styles.detailText}>할인금액</span>
-            <span className={styles.detailPrice}>-{totalDiscount}원</span>
+          <div className="detailAmount">
+            <span className="detailText">할인금액</span>
+            <span className="detailPrice">-{totalDiscount}원</span>
           </div>
-          <div className={styles.detailAmount}>
-            <span className={styles.detailText}>배송비</span>
-            <span className={styles.detailPrice}>{shippingFee}원</span>
+          <div className="detailAmount">
+            <span className="detailText">배송비</span>
+            <span className="detailPrice">{shippingFee}원</span>
           </div>
         </div>
-        <div className={styles.summBottom}>
-          <h3 className={styles.summTitle}>결제 금액</h3>
-          <span className={styles.totalAmount}>{finalAmount}원</span>
+        <div className="summBottom">
+          <h3 className="summTitle">결제 금액</h3>
+          <span className="totalAmount">{finalAmount}원</span>
         </div>
       </div>
-      <div className={styles.orderSummBottom}>
+      <div className="orderSummBottom">
         <button
           type="button"
-          className={styles.summButton2}
+          className="summButton2"
         >
           결제하기
         </button>

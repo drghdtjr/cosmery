@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './rating.module.css'
+import './rating.css'
 const StarRating = ({ score }) => {
   const fullStars = Math.floor(score);
   const stars = Array(5)
@@ -14,7 +14,7 @@ const StarRating = ({ score }) => {
       </span>
     ));
   return (
-      <div className={styles.starRating}>{stars}</div>
+      <div className="starRating">{stars}</div>
   );
 };
 

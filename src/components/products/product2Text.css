@@ -1,32 +1,63 @@
-.text-wrap{
-    display: flex;
-    height: 50px;
-    padding: 15px 144px 15px 0;
-    align-items: flex-start;
+.text-wrap {
+  display: flex;
+  height: 3.125rem;
+  padding: 0.9375rem 9rem 0.9375rem 0;
+  align-items: flex-start;
 }
-.number{
-  width: 52px;
-  height: 20px;
+
+.number {
+  width: 3.25rem;
+  height: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.text{
-  height: 20px;
+
+.text {
+  height: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.text-wrap span{
-    font-size: 20px;
-    font-weight: 700;
+
+.text-wrap span {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
-.text-wrap p{
-    font-size: 16px;
+
+.text-wrap p {
+  font-size: 1rem;
 }
-.text-wrap.active{
+
+.text-wrap.active {
   background: var(--text-color);
 }
-.text-wrap.active span, .text-wrap.active p{
+
+.text-wrap.active span,
+.text-wrap.active p {
   color: var(--bg-color1);
+}
+
+@media (max-width: 768px) {
+  .text-wrap {
+    padding: 0.5rem 1rem;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .number,
+  .text {
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .text-wrap span {
+    font-size: 1.125rem;
+  }
+
+  .text-wrap p {
+    font-size: 0.9375rem;
+  }
 }

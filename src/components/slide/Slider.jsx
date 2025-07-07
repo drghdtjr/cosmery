@@ -1,7 +1,7 @@
 import React from "react";
 import "./slide.css";
 import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect } from "react";  
 const images = [
   { src: "/banner/banner1.jpg", alt: "슬라이드 1" },
   { src: "/banner/banner2.jpg", alt: "슬라이드 2" },

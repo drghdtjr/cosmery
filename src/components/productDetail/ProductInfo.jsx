@@ -73,18 +73,13 @@ const ProductInfo = ({ data }) => {
             고객 만족도
             <span>
               <img
-                style={{ width: "20px", height: "20px" }}
                 src="./star.svg"
                 alt="고객 만족도"
               />
-              <p
-                style={{ fontSize: "16px", fontWeight: "500", fontFamily: "Montserrat" }}
-              >
+              <p>
                 4.9
               </p>
-              <p
-                style={{ fontSize: "16px", fontWeight: "500", fontFamily: "Montserrat" }}
-              >
+              <p>
                 (1,000)
               </p>
             </span>

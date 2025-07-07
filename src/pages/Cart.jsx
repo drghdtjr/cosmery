@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../components/cart/CartPage.module.css";
+import "../components/cart/cartPage.css";
 import CartSummary from "../components/cart/CartSummary.jsx"
 import ProductList from "../components/productList/ProductList.jsx";
 import CartList from "../components/cart/CartList.jsx";
@@ -67,10 +67,10 @@ const Cart = () => {
   };
 
   return (
-    <div className={styles.cartWrapper}>
-      <div className={styles.cartInner}>
-        <h2 className={styles.cartTitle}>배송 상품</h2>
-        <div className={styles.cartInnerTop}>
+    <div className="cartWrapper">
+      <div className="cartInner">
+        <h2 className="cartTitle">배송 상품</h2>
+        <div className="cartInnerTop">
           <CartList cartItems={cartItems} setCartItems={setCartItems} />
           <CartSummary
             totalPrice={totalPrice}
@@ -81,7 +81,7 @@ const Cart = () => {
             onAllPurchase={handleAllPurchate}
           />
         </div>
-        <div className={styles.cartBottom}>
+        <div className="cartBottom">
           <ProductList title="함께 구매하면 좋은 상품" />
         </div>
       </div>

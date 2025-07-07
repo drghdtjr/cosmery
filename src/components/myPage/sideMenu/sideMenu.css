@@ -1,0 +1,106 @@
+.sideWrapper {
+  width: 100%;
+  max-width: 12.5rem; /* 200px */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  gap: 1.25rem; /* 20px */
+}
+
+.sideTitle {
+  font-size: 1.375rem; /* 22px */
+  font-weight: 500;
+}
+
+.menuWrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.625rem; /* 10px */
+}
+
+.mainMenu {
+  width: 100%;
+  height: auto;
+  padding: 0.625rem; /* 10px */
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mainMenu > a {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 500;
+}
+
+.subMenu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem; /* 10px */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.subMenu > li > button {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: var(--text-color2);
+}
+
+.subMenu > li > button:hover {
+  color: var(--primary-color);
+}
+
+.subMenu > li > button.active {
+  color: var(--primary-color);
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+  .sideWrapper {
+    max-width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .sideTitle, .mainMenu>a{
+    flex-shrink: 0;
+  }
+
+  .menuWrapper,
+  .subMenu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--bg-color3);
+  }
+  .mainMenu {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .sideTitle {
+    font-size: 1.125rem;
+  }
+
+  .mainMenu > a {
+    font-size: 1rem;
+  }
+
+  .subMenu > li > button {
+    font-size: 0.8125rem;
+  }
+} 

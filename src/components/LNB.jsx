@@ -1,30 +1,50 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import categoryData from "./data/categoryData"; 
+import categoryData from "./data/categoryData";
+import "./lnb.css";
 
 const LNB = ({ isCategoryOpen, setIsCategoryOpen }) => {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleCategoryClick = (category, subcategory) => {
-    setSelectedCategory(category);
+    setIsCategoryOpen(false); // 모바일 메뉴 닫기
     navigate(`/category-product-list/${category}/${subcategory}`);
   };
 
   return (
-    <LNBWrap>
-      <LNBCategoryWrap
-        $isActive={isCategoryOpen}
-        onMouseLeave={() => setIsCategoryOpen(false)}
-      >
-        <LNBMainMenu>
+    <>
+      {/* PC 메뉴 */}
+      <div className="lnb-wrap" onMouseLeave={() => setIsCategoryOpen(false)}>
+        <div className={`lnb-category-wrap ${isCategoryOpen ? "active" : ""}`}>
+          <ul className="lnb-main-menu">
+            {categoryData.map((category, idx) => (
+              <li key={idx}>
+                <a onClick={() => handleCategoryClick(category.name, "토너")}>
+                  {category.name}
+                </a>
+                <ul className="lnb-sub-menu">
+                  {category.subcategories.map((sub, i) => (
+                    <li
+                      key={i}
+                      onClick={() => handleCategoryClick(category.name, sub)}
+                    >
+                      {sub}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* 모바일 슬라이드 메뉴 */}
+      <div className={`lnb-mobile-menu ${isCategoryOpen ? "show" : ""}`}>
+        <ul className="lnb-mobile-menu-list">
           {categoryData.map((category, idx) => (
             <li key={idx}>
-              <a onClick={() => handleCategoryClick(category.name, "토너")}>
-                {category.name}
-              </a>
-              <LNBSubMenu>
+              <strong>{category.name}</strong>
+              <ul>
                 {category.subcategories.map((sub, i) => (
                   <li
                     key={i}
@@ -33,63 +53,17 @@ const LNB = ({ isCategoryOpen, setIsCategoryOpen }) => {
                     {sub}
                   </li>
                 ))}
-              </LNBSubMenu>
+              </ul>
             </li>
           ))}
-        </LNBMainMenu>
-      </LNBCategoryWrap>
-    </LNBWrap>
+        </ul>
+      </div>
+      <div
+        className={`lnb-dim ${isCategoryOpen ? "show" : ""}`}
+        onClick={() => setIsCategoryOpen(false)}
+      />
+    </>
   );
 };
 
 export default LNB;
-
-const LNBWrap = styled.div`
-  width: 100%;
-  z-index: 999;
-  background: var(--bg-color1);
-`;
-
-const LNBCategoryWrap = styled.div`
-  max-height: ${(props) => (props.$isActive ? "62.5rem" : "0")};
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  box-shadow: 0 0 0.1875rem rgba(0, 0, 0, 0.1);
-  background: var(--bg-color1);
-`;
-
-const LNBMainMenu = styled.ul`
-  display: flex;
-  gap: 2.5rem;
-  padding: 1.875rem 0 2.5rem;
-  justify-content: center;
-
-  & > li {
-    min-width: 7.5rem;
-
-    & > a {
-      font-size: 1.125rem;
-      color: var(--text-color);
-      display: inline-block;
-      margin-bottom: 0.625rem;
-      cursor: pointer;
-    }
-  }
-`;
-
-const LNBSubMenu = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-
-  & li {
-    font-size: 0.8125rem;
-    color: var(--secondary-color);
-    transition: color 0.2s ease;
-    cursor: pointer;
-
-    &:hover {
-      color: var(--primary-color);
-    }
-  }
-`;

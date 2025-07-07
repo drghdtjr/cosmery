@@ -1,19 +1,21 @@
-.couponRow{
-    width: 612px;
-    height: 36px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.couponRow {
+  width: 38.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.couponSelect{
-    width: 300px;
-    height: 100%;
-    border: 1px solid var(--border-color2);
-    font-size: 16px;
-    padding: 0 10px;
+
+.couponSelect {
+  width: 18.75rem;
+  height: 100%;
+  border: 1px solid var(--border-color2);
+  font-size: 1rem;
+  padding: 0 0.625rem;
 }
-.discountAmount{
-    font-size: 20px;
-    font-weight: 500;
-    outline: none;
+
+.discountAmount {
+  font-size: 1.25rem;
+  font-weight: 500;
+  outline: none;
 }

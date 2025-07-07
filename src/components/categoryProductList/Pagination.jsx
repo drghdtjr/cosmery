@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import "./categoryProductList.css";
 
 const Pagination = ({
   totalItems,
@@ -10,39 +10,21 @@ const Pagination = ({
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   return (
-    <PaginationWrapper>
+    <div className="paginationWrapper">
       {[...Array(totalPages)].map((_, idx) => {
         const page = idx + 1;
         return (
-          <PageButton
+          <button
             key={page}
+            className={`pageButton ${currentPage === page ? 'active' : ''}`}
             onClick={() => onPageChange(page)}
-            active={currentPage === page}
           >
             {page}
-          </PageButton>
+          </button>
         );
       })}
-    </PaginationWrapper>
+    </div>
   );
 };
 
 export default Pagination;
-
-const PaginationWrapper = styled.div`
-  margin-top: 1.25rem;
-`;
-
-const PageButton = styled.button`
-  margin: 0 0.3125rem;
-  font-weight: ${({ active }) => (active ? "bold" : "normal")};
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  color: var(--text-color);
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;

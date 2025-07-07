@@ -1,0 +1,105 @@
+.cartSummWrapper {
+  width: 18.75rem;
+  min-width: 12.5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 1;
+  padding: 1.25rem 0;
+}
+
+.cartSummTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1.25rem;
+  gap: 1.5rem;
+  background: var(--bg-color2);
+}
+
+.summTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.summDetail {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8125rem;
+}
+
+.detailAmount {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summBottom {
+  width: 100%;
+  display: flex;
+  padding-top: 0.625rem;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color2);
+}
+
+.cartSummBottom {
+  width: 100%;
+  height: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summButton1 {
+  flex: 1;
+  height: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem 0 0 0.25rem;
+  background: var(--bg-color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.summButton2 {
+  flex: 1;
+  height: 100%;
+  border-radius: 0 0.25rem 0.25rem 0;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg-color1);
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .cartSummWrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartSummWrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartSummWrapper {
+    width: 100%;
+  }
+}

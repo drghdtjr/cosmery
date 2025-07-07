@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../components/myPage/MyPage.module.css'
+import '../components/myPage/myPage.css'
 import SideMenu from '../components/myPage/sideMenu/SideMenu.jsx'
 import SideContent1 from '../components/myPage/sidecontent/SideContent1.jsx'
 import { useState } from 'react'
@@ -12,8 +12,8 @@ const MyPage = () => {
   const [selectedMenu, setSelectedMenu] = useState("주문/배송 조회");
   const [contentType, setContentType] = useState("1");
   return (
-    <div className={styles.myPageWrapper}>
-      <div className={styles.myPageInner}>
+    <div className="myPageWrapper">
+      <div className="myPageInner">
         <SideMenu
           onSelectMenu={setSelectedMenu}
           setContentType={setContentType}

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SideMenu.module.css";
+import "./sideMenu.css";
 
 const SideMenu = ({ onSelectMenu, setContentType, selectedMenu }) => {
   const handleClick = (menu, type) => {
@@ -8,12 +8,12 @@ const SideMenu = ({ onSelectMenu, setContentType, selectedMenu }) => {
   };
 
   return (
-    <div className={styles.sideWrapper}>
-      <h2 className={styles.sideTitle}>마이페이지</h2>
-      <ul className={styles.menuWrapper}>
-        <li className={styles.mainMenu}>
+    <div className="sideWrapper">
+      <h2 className="sideTitle">마이페이지</h2>
+      <ul className="menuWrapper">
+        <li className="mainMenu">
           <a href="#">주문 관리</a>
-          <ul className={styles.subMenu}>
+          <ul className="subMenu">
             {[
               { label: "주문/배송 조회", type: "1" },
               { label: "취소/반품/교환 신청", type: "2" },
@@ -23,9 +23,7 @@ const SideMenu = ({ onSelectMenu, setContentType, selectedMenu }) => {
               <li key={item.label}>
                 <button
                   onClick={() => handleClick(item.label, item.type)}
-                  className={`${styles.subMenuBtn} ${
-                    selectedMenu === item.label ? styles.active : ""
-                  }`}
+                  className={selectedMenu === item.label ? "active" : ""}
                 >
                   {item.label}
                 </button>
@@ -33,9 +31,9 @@ const SideMenu = ({ onSelectMenu, setContentType, selectedMenu }) => {
             ))}
           </ul>
         </li>
-        <li className={styles.mainMenu}>
+        <li className="mainMenu">
           <a href="#">활동</a>
-          <ul className={styles.subMenu}>
+          <ul className="subMenu">
             {[
               { label: "나의 리뷰", type: "5" },
               { label: "문의 내역", type: "6" },
@@ -43,9 +41,7 @@ const SideMenu = ({ onSelectMenu, setContentType, selectedMenu }) => {
               <li key={item.label}>
                 <button
                   onClick={() => handleClick(item.label, item.type)}
-                  className={`${styles.subMenuBtn} ${
-                    selectedMenu === item.label ? styles.active : ""
-                  }`}
+                  className={selectedMenu === item.label ? "active" : ""}
                 >
                   {item.label}
                 </button>
@@ -53,9 +49,9 @@ const SideMenu = ({ onSelectMenu, setContentType, selectedMenu }) => {
             ))}
           </ul>
         </li>
-        <li className={styles.mainMenu}>
+        <li className="mainMenu">
           <a href="#">회원 정보</a>
-          <ul className={styles.subMenu}>
+          <ul className="subMenu">
             {[
               { label: "개인정보 수정", type: "7"},
               { label: "배송지 관리", type: "8"},
@@ -63,7 +59,7 @@ const SideMenu = ({ onSelectMenu, setContentType, selectedMenu }) => {
               <li key={item.label}>
                 <button
                   onClick={() => handleClick(item.label, item.type)}
-                  className={`${styles.subMenuBtn} ${selectedMenu === item.label ? "active" : ""}`}
+                  className={selectedMenu === item.label ? "active" : ""}
                 >{item.label}</button>
               </li>
             ))}

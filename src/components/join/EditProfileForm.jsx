@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Form.module.css";
+import "./form.css";
 
 const EditProfileForm = () => {
   const [form, setForm] = useState({
@@ -48,16 +48,16 @@ const EditProfileForm = () => {
 
   return (
     <div style={{width: '800px'}}>
-      <div className={styles.formInner2}>
+      <div className="formInner2">
         <h2>개인정보 수정</h2>
-        <form onSubmit={handleSubmit} className={styles.form}>
+        <form onSubmit={handleSubmit} className="form">
           <span>이름</span>
           <input
             type="text"
             name="name"
             value={form.name}
             readOnly
-            className={styles.readonlyInput}
+            className="readonlyInput"
           />
 
           <span>이메일</span>
@@ -68,11 +68,11 @@ const EditProfileForm = () => {
             onChange={handleChange}
             placeholder="이메일을 입력해주세요"
           />
-          {errors.email && <p className={styles.error}>{errors.email}</p>}
+          {errors.email && <p className="error">{errors.email}</p>}
 
-          <div className={styles.phoneBox}>
+          <div className="phoneBox">
             <span>휴대폰 번호</span>
-            <div className={styles.phoneInner}>
+            <div className="phoneInner">
               <input
                 type="tel"
                 name="phone"
@@ -80,11 +80,11 @@ const EditProfileForm = () => {
                 value={form.phone}
                 onChange={handleChange}
               />
-              <button className={styles.phoneBtn} type="button">
+              <button className="phoneBtn" type="button">
                 변경
               </button>
             </div>
-            {errors.phone && <p className={styles.error}>{errors.phone}</p>}
+            {errors.phone && <p className="error">{errors.phone}</p>}
           </div>
 
           <span>현재 비밀번호</span>
@@ -105,7 +105,7 @@ const EditProfileForm = () => {
             placeholder="새 비밀번호를 입력해주세요"
           />
           {errors.newPassword && (
-            <p className={styles.error}>{errors.newPassword}</p>
+            <p className="error">{errors.newPassword}</p>
           )}
 
           <span>새 비밀번호 확인</span>
@@ -117,13 +117,13 @@ const EditProfileForm = () => {
             placeholder="새 비밀번호를 다시 입력해주세요"
           />
           {errors.confirmPassword && (
-            <p className={styles.error}>{errors.confirmPassword}</p>
+            <p className="error">{errors.confirmPassword}</p>
           )}
 
           <button type="submit">
             수정하기
           </button>
-          <button className={styles.deleteBtn}>
+          <button className="deleteBtn">
             회원 탈퇴하기
           </button>
         </form>

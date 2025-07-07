@@ -1,29 +1,26 @@
 import React, { useState, useRef } from "react";
-import styles from "./SideContent2.module.css";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import calendarIcon from "/calendar.svg";
+import "./sideContent2.css";
 import TableBody3 from "../tableBody/TableBody3.jsx";
 
 const SideContent2 = ({ title, couponCount, head1, head2, head3, head4, data }) => {
   const [hasHistory, setHasHistory] = useState(false);
 
   return (
-    <div className={styles.contentWrapper}>
-      <h2 className={styles.contentTitle}>{title}</h2>
-      <div className={styles.couponArea}>
-        <span className={styles.couponInfo1}>유지원님의 보유 쿠폰</span>
-        <div className={styles.couponInfo2}>
-          <span className={styles.count}>{couponCount}</span>
+    <div className="contentWrapper">
+      <h2 className="contentTitle">{title}</h2>
+      <div className="couponArea">
+        <span className="couponInfo1">유지원님의 보유 쿠폰</span>
+        <div className="couponInfo2">
+          <span className="count">{couponCount}</span>
           <span>장</span>
         </div>
-        <div className={styles.addCoupon}>
+        <div className="addCoupon">
           <input type="text" placeholder="쿠폰번호를 입력해주세요." />
           <button>등록</button>
         </div>
       </div>
-      <table className={styles.table}>
-        <thead className={styles.tableHead}>
+      <table className="table">
+        <thead className="tableHead">
           <tr>
             <th>{head1}</th>
             <th>{head2}</th>

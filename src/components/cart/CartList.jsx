@@ -1,7 +1,6 @@
 import React from "react";
-import CartItem from "./cartItem/CartItem";
-import styles from "./CartList.module.css";
-import { useState } from "react";
+import CartItem from "./cartItem/CartItem.jsx";
+import "../cart/cartList.css";
 
 const CartList = ( {cartItems, setCartItems }) => {
   const isAllChecked = cartItems.every((item) => item.checked);
@@ -43,30 +42,30 @@ const CartList = ( {cartItems, setCartItems }) => {
   };
   return (
     <div>
-      <div className={styles.tableTitle}>
-        <div className={styles.titleLeft}>
+      <div className="tableTitle">
+        <div className="titleLeft">
           <input
             type="checkbox"
-            className={styles.tableCheckbox}
+            className="tableCheckbox"
             checked={isAllChecked}
             onChange={toggleAll}
           />
-          <span style={{ fontSize: "16px" }}>전체선택</span>
+          <span>전체선택</span>
         </div>
         <button
           type="button"
-          className={styles.titleButton}
+          className="titleButton"
           onClick={deleteSelected}
         >
           선택 삭제
         </button>
       </div>
-      <table className={styles.cartTable}>
-        <thead className={styles.cartHead}>
-          <tr className={styles.tableRow}>
+      <table className="cartTable">
+        <thead className="cartHead">
+          <tr className="tableRow">
             <td>상품명</td>
             <td colSpan={3}>
-              <div className={styles.itemMeta}>
+              <div className="itemMeta">
                 <div>수량</div>
                 <div>구매가</div>
                 <div>옵션</div>
@@ -74,7 +73,7 @@ const CartList = ( {cartItems, setCartItems }) => {
             </td>
           </tr>
         </thead>
-        <tbody className={styles.cartBody}>
+        <tbody className="cartBody">
           {cartItems.map((item) => (
             <CartItem
               key={item.id}

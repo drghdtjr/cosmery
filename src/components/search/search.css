@@ -1,0 +1,243 @@
+/* SearchContainer 스타일 */
+.searchWrapper {
+  width: 25.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: width 0.3s ease;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  z-index: auto;
+  margin-right: 0.5rem;
+}
+
+.searchWrapper.mobile {
+  width: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchWrapper.mobile.expanded {
+  width: 90vw;
+  background: var(--bg-color1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  z-index: 99;
+}
+
+.searchResultArea {
+  position: absolute;
+  top: 2.75rem;
+  left: 0;
+  width: 100%;
+  height: 21.875rem;
+  background: var(--bg-color3);
+  border-left: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  overflow: hidden;
+  transition: max-height 0.1s ease, padding 0.1s ease, opacity 0.1s ease;
+}
+
+.searchResultArea.expand {
+  max-height: 21.875rem;
+  padding: 1.25rem;
+  opacity: 1;
+}
+
+.searchResultArea.collapse {
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  border: none;
+}
+
+.searchResultArea ul {
+  list-style: none;
+  padding: 0;
+}
+
+.searchResultArea li {
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+}
+
+.searchPlaceholder {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+}
+
+.searchCloseButton {
+  margin-left: 0.625rem;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* SearchBar 스타일 */
+.searchBarWrapper {
+  width: 25.125rem;
+  height: 2.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+  border-bottom-color: var(--text-color);
+}
+
+.searchBarWrapper.expanded {
+  border-color: var(--primary-color);
+  border-bottom-color: var(--border-color2);
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+
+.searchInput {
+  flex: 1;
+  margin-left: 0.625rem;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  background: transparent;
+}
+
+.searchButton {
+  width: 2.75rem;
+  height: 2.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchButton img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .searchWrapper {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    max-width: 2.75rem;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    z-index: auto;
+    position: static;
+    transition: none;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .searchWrapper.mobile.expanded,
+  .searchWrapper.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    background: var(--bg-color1);
+    z-index: 9999;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: none;
+  }
+  .searchBarWrapper {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    max-width: 2.75rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .searchBarWrapper.expanded,
+  .searchWrapper.fullscreen .searchBarWrapper {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    border-radius: 0.625rem;
+    border: 1px solid var(--primary-color);
+    background: var(--bg-color1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .searchBarWrapper:not(.expanded):not(.fullscreen) .searchInput {
+    display: none;
+  }
+  .searchWrapper.fullscreen .searchInput {
+    display: block;
+    font-size: 1rem;
+  }
+  .searchWrapper.fullscreen .searchButton {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .searchResultArea {
+    position: static;
+    width: 100%;
+    top: auto;
+    left: auto;
+    height: auto;
+    max-height: 60vh;
+    border-radius: 0.625rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .searchResultArea.expand {
+    max-height: 60vh;
+    padding: 1.25rem;
+    opacity: 1;
+  }
+  .searchResultArea.collapse {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    border: none;
+  }
+  .search-back-btn {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    z-index: 10000;
+    cursor: pointer;
+    display: block;
+  }
+}
+
+/* PC에서 닫기 버튼 숨김 */
+@media (min-width: 769px) {
+  .search-back-btn {
+    display: none;
+  }
+}

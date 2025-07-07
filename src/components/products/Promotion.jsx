@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import styles from "./promotion.module.css";
+import "./promotion.css";
 import Product1 from "./Product1";
 import { productData } from "../data/productData.js";
 
 const Promotion = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className={styles.promotionWrap}>
-      <div className={styles.promotionImage}>
+    <div className="promotionWrap">
+      <div className="promotionImage">
         <img src={data.image} alt="프로모션 상품" />
-        <div className={styles.promotionImageOverlay}></div>
+        <div className="promotionImageOverlay"></div>
       </div>
-      <div className={styles.promotionDetail}>
-        <div className={styles.detailTitle}>
+      <div className="promotionDetail">
+        <div className="detailTitle">
           <span>{data.subTitle}</span>
           <span>{data.title}</span>
         </div>
         <button onClick={() => setIsOpen(true)}>더보기</button>
       </div>
       {isOpen && (
-        <div className={styles.promotionModal}>
-          <div className={styles.promotionModalContent}>
-            <div className={styles.promotionModalContentHeader}>
+        <div className="promotionModal">
+          <div className="promotionModalContent">
+            <div className="promotionModalContentHeader">
               <h2 style={{ fontSize: "24px" }}>프로모션 상품</h2>
                 <button
                   className={styles.promotionModalClose}
@@ -30,7 +30,7 @@ const Promotion = ({ data }) => {
                   &times;
                 </button>
             </div>
-            <div className={styles.promotionModalContentInner}>
+            <div className="promotionModalContentInner">
             {productData.map((product) => (
                 <Product1 key={product.id} data={product} />
               ))}
