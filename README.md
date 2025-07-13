@@ -30,9 +30,8 @@
 
 | 홈 페이지 | 상품 상세 | 장바구니 |
 |----------|-----------|---------|
-| ![홈](<img width="1920" height="3812" alt="메인 페이지" src="https://github.com/user-attachments/assets/6f246c96-5c83-473e-9e08-0823af54b7dd" />) | ![상품](./images/detail.png) | ![장바구니](./images/cart.png) |
-
-> ※ 이미지는 프로젝트 내부 `/images` 폴더에 저장되어 있다고 가정
+| ![홈](.public/readme/1.png) | ![상품상세페이지](.public/readme/2.png) | ![장바구니](.public/readme/3.png) |
+ 
 
 ---
 
@@ -61,5 +60,15 @@
 
 ---
 
-## 🗂 프로젝트 구조 예시
+## 🚀 배포 링크
+
+🔗 [[https://cormery.vercel.app](https://cormery.vercel.app)](https://personal-space-eta.vercel.app/)
+
+---
+
+## 📝 기타
+
+- 개발 기간: 2025.06 ~ 2025.07  
+- 참여 인원: 1명 (개인 프로젝트)  
+- 기획부터 UI/UX 설계, 퍼블리싱, 프론트엔드 개발까지 단독 진행
 
