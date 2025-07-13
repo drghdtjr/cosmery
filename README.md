@@ -30,8 +30,8 @@
 
 | 홈 페이지 | 상품 상세 | 장바구니 |
 |----------|-----------|---------|
-| ![홈](.public/readme/1.png) | ![상품상세페이지](.public/readme/2.png) | ![장바구니](.public/readme/3.png) |
- 
+| ![홈](public/readme/1.png) | ![상품상세페이지](public/readme/2.png) | ![장바구니](public/readme/3.png) |
+
 
 ---
 
